@@ -43,3 +43,20 @@ and open the template in the editor.
     position: relative; top: 8px; left: -10px;
     margin-right: 10px;
 }
+
+/**************************************************/
+
+#modalForm{
+    position: relative; left: 30px;
+}
+
+#modalForm input{
+    position: relative; left: 10px;
+    margin-right: 20px;
+    width: 200px;
+}
+
+.inputAux{
+    margin-right: 20px;
+    width: 10px;
+}
