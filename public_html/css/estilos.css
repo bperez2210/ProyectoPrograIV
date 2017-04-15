@@ -14,18 +14,33 @@ and open the template in the editor.
 }
 
 #encabezado{
-    position: relative;
-    width: 1708px;
+    position: relative; top: -20px;
+    background-color: #00394d;
+    padding-left: 0;
     height: 150px;
+    padding-right: 0;
 }
 
-#logo{
-    position: relative; top: -140px; left: 20px;
-    width: 120px;
-    height: 120px;
-    border: 2px solid white;
+
+#encabezado h3{
+    font-family: 'Satisfy', cursive;
+    position: relative; top:50px; left: 1300px;
+    color: yellow;
+    font-size: 40px;
+    width: 200px;
+}
+
+#encabezado img{
+    position: relative; top: -40px; left: 50px;
+    width: 300px;
+    height: 100px;
 }
 
 #navBar{
-    position: relative; top: -130px;
+    position: relative; top: -30px;
+}
+
+#menuLogSign button{
+    position: relative; top: 8px; left: -10px;
+    margin-right: 10px;
 }
