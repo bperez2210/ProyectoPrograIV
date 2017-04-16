@@ -51,12 +51,21 @@ and open the template in the editor.
 }
 
 #modalForm input{
-    position: relative; left: 10px;
+    position: relative; left: 0px;
     margin-right: 20px;
     width: 200px;
 }
 
-.inputAux{
-    margin-right: 20px;
-    width: 10px;
+#inputAux label{
+    margin-right: 50px;
 }
+
+#inputAux input{
+    width: 140px;
+}
+
+.buttonOpt{
+    width: 598px;
+    margin-left: -45px;
+}
+/**************************************************/
