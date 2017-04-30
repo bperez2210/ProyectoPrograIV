@@ -1,0 +1,77 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14/04/2017, 06:18:01 PM
+    Author     : admin
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#encabezado{
+    position: relative; top: -20px;
+    background-color: #00394d;
+    padding-left: 0;
+    height: 150px;
+    padding-right: 0;
+}
+
+
+#encabezado h3{
+    position:absolute; right: 30px; top: 40px;
+    color: yellow;
+    font-size: 40px;
+    font-family: 'Satisfy', cursive;
+}
+
+#encabezado img{
+    position: relative; top: 30px; left: 50px;
+    width: 300px;
+    height: 100px;
+}
+
+#navBar{
+    position: relative; top: -40px;
+}
+
+#menuLogSign button{
+    position: relative; top: 8px; left: -10px;
+    margin-right: 10px;
+}
+
+/**************************************************/
+
+#modalForm{
+    position: relative; left: 30px;
+}
+
+#modalForm input{
+    position: relative; left: 0px;
+    margin-right: 20px;
+    width: 200px;
+}
+
+#inputAux label{
+    margin-right: 50px;
+}
+
+#inputAux input{
+    width: 140px;
+}
+
+.buttonOpt{
+    width: 598px;
+    margin-left: -45px;
+}
+/**************************************************/
+
+
+.banner{
+    position: relative; top: -50px;
+    height: 400px;
+}
