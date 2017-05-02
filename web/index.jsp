@@ -1,10 +1,11 @@
+<%-- 
+    Document   : index
+    Created on : 01/05/2017, 11:31:28 AM
+    Author     : lobo
+--%>
 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>ReservacionesCR</title>
@@ -27,6 +28,7 @@ and open the template in the editor.
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Inicio</a></li>
                         <li><a href="#">Vuelos</a></li>
+                        <li class="active"><a href="pags/quienesSomos.html">Quienes Somos</a></li>
                         <li><a href="#">Referencias</a></li>
                         <li><a href="#">Contacto</a></li>
                     </ul>
@@ -48,7 +50,7 @@ and open the template in the editor.
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
-                
+
             </ol>
             <div class="carousel-inner" role="listbox"> 
                 <div class="item active">
@@ -202,23 +204,24 @@ and open the template in the editor.
                 </div>
             </div>
         </div>  <!--Ingreso-->
-         <div align="center">
-             <table class="table table-striped">
-                 <caption>Aviones</caption>
-                    <thead>
-                        <tr>
-                            <th>IDENTIFICADOR</th>
-                            <th>AÑO</th>
-                            <th>MODELO</th>
-                            <th>MARCA</th>
-                            <th>CANT. PASAJEROS</th>
-                            <th>CANT. FILAS</th>
-                            <th>CANT. ASINTOS POR FILA</th>
-                        </tr>
-                    </thead>
-                    <tbody id="listado"></tbody> <!-- donde se muestra la informacion -->
-                </table>
+        <div align="center">
+            <table class="table table-striped">
+                <caption>Aviones</caption>
+                <thead>
+                    <tr>
+                        <th>IDENTIFICADOR</th>
+                        <th>AÑO</th>
+                        <th>MODELO</th>
+                        <th>MARCA</th>
+                        <th>CANT. PASAJEROS</th>
+                        <th>CANT. FILAS</th>
+                        <th>CANT. ASINTOS POR FILA</th>
+                    </tr>
+                </thead>
+                <tbody id="listado"></tbody> <!-- donde se muestra la informacion -->
+            </table>
         </div>
         <div></div>
     </body>
 </html>
+

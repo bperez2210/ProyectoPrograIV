@@ -21,6 +21,13 @@ and open the template in the editor.
     padding-right: 0;
 }
 
+.contenedor{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    width: 1200px;
+    height: auto;
+}
 
 #encabezado h3{
     position:absolute; right: 30px; top: 40px;
