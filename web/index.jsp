@@ -10,8 +10,7 @@
     <head>
         <title>ReservacionesCR</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
@@ -23,14 +22,23 @@
             <img src="imagenes/inicio/avion.gif" alt=""/>
         </div>
         <div id="navBar">
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Desplegar navegación</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Inicio</a></li>
+                        <li><a href="#">Inicio</a></li>
                         <li><a href="#">Vuelos</a></li>
-                        <li class="active"><a href="pags/quienesSomos.html">Quienes Somos</a></li>
+                        <li><a href="pags/quienesSomos.html">Quienes Somos</a></li>
                         <li><a href="#">Referencias</a></li>
-                        <li><a href="#">Contacto</a></li>
+                        <li><a href="pags/contactenos.html">Contacto</a></li>
                     </ul>
                     <form class="navbar-form navbar-left">
                         <div class="form-group">
@@ -38,19 +46,18 @@
                         </div>
                         <button type="submit" class="btn btn-default">Buscar</button>
                     </form>
-                    <ul class="nav navbar-nav navbar-right" id="menuLogSign">
-                        <li><button type="button" class="btn btn-info glyphicon glyphicon-user" data-toggle="modal" data-target="#myModalRegistro"> Registrarse</button></li>
-                        <li><button type="button" class="btn btn-success glyphicon glyphicon-log-in" data-toggle="modal" data-target="#myModalIngreso"> Entrar</button></li>
-                    </ul>
+                    <div class="nav navbar-nav navbar-right" id="menuLogSign">
+                        <button type="button" class="btn btn-info glyphicon glyphicon-user" data-toggle="modal" data-target="#myModalRegistro"> Registrarse</button>
+                        <button type="button" class="btn btn-success glyphicon glyphicon-log-in" data-toggle="modal" data-target="#myModalIngreso"> Entrar</button>
+                    </div>
                 </div>
-            </nav>
-        </div>  <!--Navbar-->
+            </nav> <!--Navbar-->
+        </div>
         <div id="myCarousel" class="banner carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
-
             </ol>
             <div class="carousel-inner" role="listbox"> 
                 <div class="item active">
@@ -204,7 +211,7 @@
                 </div>
             </div>
         </div>  <!--Ingreso-->
-        <div align="center">
+        <div align="center" class="table-responsive">
             <table class="table table-striped">
                 <caption>Aviones</caption>
                 <thead>

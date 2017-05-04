@@ -8,67 +8,64 @@ and open the template in the editor.
     Author     : admin
 */
 
-*{
-    margin: 0;
-    padding: 0;
-}
 
 #encabezado{
-    position: relative; top: -20px;
+    position: relative;
     background-color: #00394d;
     padding-left: 0;
-    height: 150px;
     padding-right: 0;
+    height: 100px;
 }
 
-.contenedor{
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-    width: 1200px;
-    height: auto;
+#contenedor{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+    width: 90%;
 }
 
 #encabezado h3{
-    position:absolute; right: 30px; top: 40px;
+    position:absolute; right: 5%; top: 20%;
     color: yellow;
-    font-size: 40px;
+    font-size: 50px;
     font-family: 'Satisfy', cursive;
 }
 
 #encabezado img{
-    position: relative; top: 30px; left: 50px;
-    width: 300px;
-    height: 100px;
+    position: absolute;
+    height: 100%;
 }
 
 #navBar{
-    position: relative; top: -40px;
+    position: relative;
 }
 
 #menuLogSign button{
-    position: relative; top: 8px; left: -10px;
-    margin-right: 10px;
+    margin-top: 3%;
+    left: -10%;
 }
 
+#tabla{
+     width: 100%;
+}
 /**************************************************/
 
 #modalForm{
-    position: relative; left: 30px;
+    position: relative; left: 3%;
 }
 
 #modalForm input{
-    position: relative; left: 0px;
-    margin-right: 20px;
-    width: 200px;
+    position: relative;
+    margin-right: 2%;
+    width: 20%;
 }
 
 #inputAux label{
-    margin-right: 50px;
+    margin-right: 5%;
 }
 
 #inputAux input{
-    width: 140px;
+    width: 14%;
 }
 
 .buttonOpt{
@@ -79,6 +76,12 @@ and open the template in the editor.
 
 
 .banner{
-    position: relative; top: -50px;
-    height: 400px;
+    position: relative; top: -20px;
+    left: 0;
+    height: 200px;
+    width: 100%;
 }
+  .carousel-inner > .item > img{
+      width: 100%;
+      height: 200px;
+  }
