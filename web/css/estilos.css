@@ -91,13 +91,10 @@ and open the template in the editor.
 }
 
 .contacto{
-    width:330px;
+    width:370px;
     height:420px;
     position: relative; top:-390px; left: 710px;
-    border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
-    border: 4px solid #000000;
+    
 }
 .oficinas{
     position: relative; top:-15px; left:260px; 
