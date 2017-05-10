@@ -107,3 +107,16 @@ and open the template in the editor.
 .enviar{
     position: relative; top:-20px; left: 130px;
 }
+.texto{
+    width: 100%;
+    text-align: justify;
+    font-family: 'Tangerine', serif;
+    font-size: 20px;
+}
+.titulos{
+    width: 100%;
+    text-align: center;
+    background: purple;
+    font-family: 'Tangerine', serif;
+    font-size: 40px;
+}
