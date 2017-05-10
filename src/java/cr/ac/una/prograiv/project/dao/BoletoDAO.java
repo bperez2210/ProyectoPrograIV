@@ -82,5 +82,10 @@ public class BoletoDAO extends HibernateUtil implements IBaseDAO< Boleto,Integer
         }
         return listaBoleto;
     }
+
+    @Override
+    public Boleto findByWord(String key) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

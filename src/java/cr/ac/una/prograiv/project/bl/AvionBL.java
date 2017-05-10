@@ -44,5 +44,10 @@ public class AvionBL extends BaseBL implements IBaseBL<Avion, Integer>{
     public List<Avion> findAll(String className) {
         return this.getDao(className).findAll();
     }
+
+    @Override
+    public Avion findByWord(String o) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

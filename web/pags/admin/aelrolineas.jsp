@@ -1,6 +1,6 @@
 <%-- 
-    Document   : index
-    Created on : 01/05/2017, 11:31:28 AM
+    Document   : indexAdmin
+    Created on : 06/05/2017, 08:06:52 PM
     Author     : lobo
 --%>
 
@@ -13,13 +13,13 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     </head>
     <body>
         <div id="encabezado">
             <h3>Aero-Tickets</h3>
-            <img src="imagenes/inicio/avion.gif" alt=""/>
+            <img src="../../imagenes/inicio/avion.gif" alt=""/>
         </div>
         <div id="navBar">
             <nav class="navbar navbar-inverse" role="navigation">
@@ -36,9 +36,18 @@
                     <ul class="nav navbar-nav">
                         <li><a href="#">Inicio</a></li>
                         <li><a href="#">Vuelos</a></li>
-                        <li><a href="pags/quienesSomos.html">Quienes Somos</a></li>
-                        <li><a href="#">Referencias</a></li>
-                        <li><a href="pags/contactenos.html">Contacto</a></li>
+                        <li><a href="../quienesSomos.jsp">Quienes Somos</a></li>
+                        <li><a href="../contactenos.jsp">Contacto</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Opciones de administrador <b class="caret"></b>
+                            </a>
+                            <ul class="navbar-nav navbar-inverse dropdown-menu">
+                                <li><a href="#">Agregar usuarios</a></li>
+                                <li><a href="#">Agregar aviones</a></li>
+                                <li><a href="#">Agregar aerolinea</a></li>
+                            </ul>
+                        </li>
                     </ul>
                     <form class="navbar-form navbar-left">
                         <div class="form-group">
@@ -61,21 +70,21 @@
             </ol>
             <div class="carousel-inner" role="listbox"> 
                 <div class="item active">
-                    <img src="imagenes/Banner/banner-travel.jpg" alt=""/>
+                    <img src="../../imagenes/Banner/banner-travel.jpg" alt=""/>
                     <div class="carousel-caption">
                         <h3></h3>
                         <p></p>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="imagenes/Banner/banner-1814989_1280.jpg" alt=""/>
+                    <img src="../../imagenes/Banner/banner-1814989_1280.jpg" alt=""/>
                     <div class="carousel-caption">
                         <h3></h3> 
                         <p></p>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="imagenes/Banner/banner.jpg" alt=""/>
+                    <img src="../../imagenes/Banner/banner.jpg" alt=""/>
                     <div class="carousel-caption">
                         <h3></h3>
                         <p></p>
@@ -162,6 +171,9 @@
                                     <div class="col-xs-3">
                                         <input type="text" id="ciudad" class="form-control" placeholder="Ciudad">
                                     </div>
+                                    <div class="col-xs-3">
+                                        <input type="text" id="estado" class="form-control" placeholder="Estado">
+                                    </div>
                                 </div>
                                 <div class="modal-footer buttonOpt" >
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -228,4 +240,3 @@
         <div></div>
     </body>
 </html>
-

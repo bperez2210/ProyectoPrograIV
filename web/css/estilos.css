@@ -57,7 +57,7 @@ and open the template in the editor.
 #modalForm input{
     position: relative;
     margin-right: 2%;
-    width: 20%;
+    width: 300%;
 }
 
 #inputAux label{
@@ -65,7 +65,7 @@ and open the template in the editor.
 }
 
 #inputAux input{
-    width: 14%;
+    width: 120%;
 }
 
 .buttonOpt{
@@ -78,16 +78,16 @@ and open the template in the editor.
 .banner{
     position: relative; top: -20px;
     left: 0;
-    height: 400px;
+    height: 200px;
     width: 100%;
 }
   .carousel-inner > .item > img{
       width: 100%;
-      height: 400px;
+      height: 200px;
   }
   
   .mapa{
-    position: relative; top:-50x; left: 20px;
+    position: relative; top: -50px; left: 20px;
 }
 
 .contacto{
