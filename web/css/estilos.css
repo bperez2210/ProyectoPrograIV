@@ -87,7 +87,7 @@ and open the template in the editor.
   }
   
   .mapa{
-    position: relative; top:-50x; left: 20px;
+    position: relative; top:-45x; left: 20px;
 }
 
 .contacto{
@@ -100,7 +100,7 @@ and open the template in the editor.
     border: 4px solid #000000;
 }
 .oficinas{
-    position: relative; top:-10px; left:260px; 
+    position: relative; top:-15px; left:260px; 
     color: blue;
 }
 .piedepagina{
