@@ -96,13 +96,13 @@ and open the template in the editor.
     
 }
 .oficinas{
-    position: relative; top:-15px; left:260px; 
+    position: relative; top:-15px; left:26%x; 
     color: blue;
 }
 .piedepagina{
-    position: relative; top:0px; left: 10px;
+    position: relative; top:0px; left: 1%;
 }
 
 .enviar{
-    position: relative; top:-20px; left: 130px;
+    position: relative; top:-20px; left: 130%;
 }
