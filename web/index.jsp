@@ -36,7 +36,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href="#">Inicio</a></li>
                         <li><a href="#">Vuelos</a></li>
-                        <li><a href="pags/quienesSomos.html">Quienes Somos</a></li>
+                        <li><a href="pags/quienesSomos.html">Quiénes Somos</a></li>
                         <li><a href="#">Referencias</a></li>
                         <li><a href="pags/contactenos.html">Contacto</a></li>
                     </ul>
