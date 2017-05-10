@@ -85,3 +85,28 @@ and open the template in the editor.
       width: 100%;
       height: 400px;
   }
+  
+  .mapa{
+    position: relative; top:-40px; left: 20px;
+}
+
+.contacto{
+    width:330px;
+    height:420px;
+    position: relative; top:-410px; left: 710px;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 4px solid #000000;
+}
+.oficinas{
+    position: relative; top:-40px; left:260px; 
+    color: blue;
+}
+.piedepagina{
+    position: relative; top:0px; left: 10px;
+}
+
+.enviar{
+    position: relative; top:-20px; left: 130px;
+}
