@@ -17,10 +17,10 @@ public class UsuarioBL extends BaseBL implements IBaseBL<Usuario, Integer>{
     }
     @Override
     public void save(Usuario o) {
-        if(this.findById(o.getPkIdUsuario())==null){
+        if(findByWord(o.getNombreUsuario())==null){
             this.getDao(o.getClass().getName()).save(o);
         }else{
-            System.out.println("Error el Usuario no existe");
+            System.out.println("Error el Usuario ya existe");
         }
     }
     
@@ -40,9 +40,16 @@ public class UsuarioBL extends BaseBL implements IBaseBL<Usuario, Integer>{
     public Usuario findById(Integer o) {
         return (Usuario) this.getDao(Usuario.class.getName()).findById(o);
     }
+    
+    
     @Override
-    public List<Usuario> findAll(String className) {
-        return this.getDao(className).findAll();
+    public List<Usuario> findAll(String o) {
+        return this.getDao(o).findAll();
+    }
+
+    @Override
+    public Usuario findByWord(String o) {
+        return (Usuario) this.getDao(Usuario.class.getName()).findByWord(o);
     }
     
 }

@@ -82,5 +82,10 @@ public class AerolineaDAO extends HibernateUtil implements IBaseDAO<Aerolinea,In
         }
         return listaAerolinea;
     }
+
+    @Override
+    public Aerolinea findByWord(String key) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

@@ -8,7 +8,6 @@ and open the template in the editor.
     Author     : admin
 */
 
-
 #encabezado{
     position: relative;
     background-color: #00394d;
@@ -57,7 +56,7 @@ and open the template in the editor.
 #modalForm input{
     position: relative;
     margin-right: 2%;
-    width: 20%;
+    width: 300%;
 }
 
 #inputAux label{
@@ -65,7 +64,7 @@ and open the template in the editor.
 }
 
 #inputAux input{
-    width: 14%;
+    width: 120%;
 }
 
 .buttonOpt{
@@ -78,30 +77,30 @@ and open the template in the editor.
 .banner{
     position: relative; top: -20px;
     left: 0;
-    height: 400px;
+    height: 200px;
     width: 100%;
 }
   .carousel-inner > .item > img{
       width: 100%;
-      height: 400px;
+      height: 200px;
   }
   
   .mapa{
-    position: relative; top:-45x; left: 20px;
+    position: relative; top: 5px; left: 20px;
 }
 
 .contacto{
-    width:370px;
+    width:33%;
     height:420px;
     position: relative; top:-390px; left: 710px;
     
 }
 .oficinas{
-    position: relative; top:-15px; left:260px; 
+    position: relative; top:-15px; left:250px; 
     color: blue;
 }
 .piedepagina{
-    position: relative; top:0px; left: 10px;
+    position: relative; top:0px; left: 1%;
 }
 
 .enviar{
@@ -113,10 +112,35 @@ and open the template in the editor.
     font-family: 'Tangerine', serif;
     font-size: 20px;
 }
-.titulos{
+
+.texto1{
+    width: 100%;
+    text-align: center;
+    font-family: 'Tangerine', serif;
+    font-size: 20px;
+}
+.titulos1{
     width: 100%;
     text-align: center;
     background: purple;
     font-family: 'Tangerine', serif;
     font-size: 40px;
+}
+.titulos2{
+    text-align: center;
+    background: rosybrown;
+    font-family: 'Tangerine', serif;
+    font-size: 40px;
+}
+.espacio1{
+    height:160px;
+}
+.espacio2{
+    height:360px;
+}
+.espacio3{
+    height:445px;
+}
+.espacio4{
+    height:415px;
 }

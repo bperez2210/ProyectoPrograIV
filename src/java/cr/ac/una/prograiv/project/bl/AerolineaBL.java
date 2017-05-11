@@ -44,5 +44,10 @@ public class AerolineaBL extends BaseBL implements IBaseBL<Aerolinea, Integer>{
     public List<Aerolinea> findAll(String className) {
         return this.getDao(className).findAll();
     }
+
+    @Override
+    public Aerolinea findByWord(String o) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

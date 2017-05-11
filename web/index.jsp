@@ -16,7 +16,7 @@
         <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     </head>
-    <body>
+    <body class="bg-success">
         <div id="encabezado">
             <h3>Aero-Tickets</h3>
             <img src="imagenes/inicio/avion.gif" alt=""/>
@@ -161,9 +161,6 @@
                                     <label for="direccion" class="col-xs-2 control-label">Dirección</label>
                                     <div class="col-xs-3">
                                         <input type="text" id="ciudad" class="form-control" placeholder="Ciudad">
-                                    </div>
-                                    <div class="col-xs-3">
-                                        <input type="text" id="estado" class="form-control" placeholder="Estado">
                                     </div>
                                 </div>
                                 <div class="modal-footer buttonOpt" >

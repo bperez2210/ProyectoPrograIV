@@ -44,5 +44,10 @@ public class BoletoBL extends BaseBL implements IBaseBL<Boleto, Integer>{
     public List<Boleto> findAll(String className) {
         return this.getDao(className).findAll();
     }
+
+    @Override
+    public Boleto findByWord(String o) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

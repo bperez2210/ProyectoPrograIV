@@ -1,35 +1,53 @@
+<%-- 
+    Document   : indexAdmin
+    Created on : 06/05/2017, 08:06:52 PM
+    Author     : lobo
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>Contacto</title>
-         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <title>ReservacionesCR</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     </head>
-    <body class="bg-success">
+    <body>
         <div id="encabezado">
             <h3>Aero-Tickets</h3>
-            <img src="../imagenes/inicio/avion.gif" alt=""/>
+            <img src="../../imagenes/inicio/avion.gif" alt=""/>
         </div>
         <div id="navBar">
-            <nav class="navbar navbar-inverse">
-                <div class="container-fluid">
-                    <ul class="nav navbar-nav">                        
-                        <li><a href="../index.jsp">Inicio</a></li>
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Desplegar navegación</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Inicio</a></li>
                         <li><a href="#">Vuelos</a></li>
-                        <li><a href="quienesSomos.html">Quiénes Somos</a></li>
-                        <li><a href="#">Referencias</a></li>
-                        
-                        <li><a href="contactenos.html">Contacto</a></li>
+                        <li><a href="../quienesSomos.jsp">Quienes Somos</a></li>
+                        <li><a href="../contactenos.jsp">Contacto</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Opciones de administrador <b class="caret"></b>
+                            </a>
+                            <ul class="navbar-nav navbar-inverse dropdown-menu">
+                                <li><a href="usuarios.jsp">Opciones de usuarios</a></li>
+                                <li><a href="aviones.jsp">Opciones de aviones</a></li>
+                                <li><a href="aelrolineas.jsp">Opciones de aerolinea</a></li>
+                            </ul>
+                        </li>
                     </ul>
                     <form class="navbar-form navbar-left">
                         <div class="form-group">
@@ -37,43 +55,52 @@ and open the template in the editor.
                         </div>
                         <button type="submit" class="btn btn-default">Buscar</button>
                     </form>
-                    <ul class="nav navbar-nav navbar-right" id="menuLogSign">
-                        <li><button type="button" class="btn btn-info glyphicon glyphicon-user" data-toggle="modal" data-target="#myModalRegistro">Registrarse</button></li>
-                        <li><button type="button" class="btn btn-success glyphicon glyphicon-log-in" data-toggle="modal" data-target="#myModalIngreso"> Entrar</button></li>
-                    </ul>
+                    <div class="nav navbar-nav navbar-right" id="menuLogSign">
+                        <button type="button" class="btn btn-info glyphicon glyphicon-user" data-toggle="modal" data-target="#myModalRegistro"> Registrarse</button>
+                        <button type="button" class="btn btn-success glyphicon glyphicon-log-in" data-toggle="modal" data-target="#myModalIngreso"> Entrar</button>
+                    </div>
                 </div>
-            </nav>
-        </div>  <!--Navbar-->    
-        <!----> <h3 class="modal-title oficinas">Oficinas</h3>
-        <div class="mapa">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62867.597373497214!2d-84.23890192212515!3d9.998277992852325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0f9a32e823a41%3A0xc545f9616eaf5b01!2sAeropuerto+Internacional+Juan+Santamar%C3%ADa!5e0!3m2!1ses!2scr!4v1492556102764" width="570" height="350" allowfullscreen></iframe>       
+            </nav> <!--Navbar-->
         </div>
-               <div class="contacto">            
-             <form>
-                <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre">
+        <div id="myCarousel" class="banner carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox"> 
+                <div class="item active">
+                    <img src="../../imagenes/Banner/banner-travel.jpg" alt=""/>
+                    <div class="carousel-caption">
+                        <h3></h3>
+                        <p></p>
+                    </div>
                 </div>
-                 <div class="form-group">
-                     <label for="correo">Correo</label>
-                     <input type="text" class="form-control" id="correo" placeholder="Correo">
-                 </div>
-                 <div class="checkbox">
-                     <label>
-                         <input type="checkbox">Recordar
-                     </label>
-                 </div>
-                 <div class="form-group">
-                     <label for="escribanos">Escribanos</label>
-                     <input type="text" id="escribanos">
-                     <p class="help-block">Solo texto.</p>
-                 </div> 
-             </form>
-             <button type="submit" class="btn btn-primary enviar">Enviar</button>
-             <br>
-             <b> Teléfonos:</b> <br>8998-9889<br>8888-8888 <br>
-             <b>Correos:</b> <br> aerotiquets12@gmail.com <br> viajetiquets23@hotmail.com <br>
-        </div>
+                <div class="item">
+                    <img src="../../imagenes/Banner/banner-1814989_1280.jpg" alt=""/>
+                    <div class="carousel-caption">
+                        <h3></h3> 
+                        <p></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../../imagenes/Banner/banner.jpg" alt=""/>
+                    <div class="carousel-caption">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>  <!--Slider-->
         <div class="container">
             <!-- Modal -->
             <div class="modal fade" id="myModalRegistro" role="dialog">
@@ -144,6 +171,9 @@ and open the template in the editor.
                                     <div class="col-xs-3">
                                         <input type="text" id="ciudad" class="form-control" placeholder="Ciudad">
                                     </div>
+                                    <div class="col-xs-3">
+                                        <input type="text" id="estado" class="form-control" placeholder="Estado">
+                                    </div>
                                 </div>
                                 <div class="modal-footer buttonOpt" >
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -190,5 +220,23 @@ and open the template in the editor.
                 </div>
             </div>
         </div>  <!--Ingreso-->
+        <div align="center" class="table-responsive">
+            <table class="table table-striped">
+                <caption>Aviones</caption>
+                <thead>
+                    <tr>
+                        <th>IDENTIFICADOR</th>
+                        <th>AÑO</th>
+                        <th>MODELO</th>
+                        <th>MARCA</th>
+                        <th>CANT. PASAJEROS</th>
+                        <th>CANT. FILAS</th>
+                        <th>CANT. ASINTOS POR FILA</th>
+                    </tr>
+                </thead>
+                <tbody id="listado"></tbody> <!-- donde se muestra la informacion -->
+            </table>
+        </div>
+        <div></div>
     </body>
 </html>

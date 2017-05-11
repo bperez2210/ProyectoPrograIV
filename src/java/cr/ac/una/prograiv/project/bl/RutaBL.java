@@ -44,5 +44,10 @@ public class RutaBL extends BaseBL implements IBaseBL<Ruta, Integer>{
     public List<Ruta> findAll(String className) {
         return this.getDao(className).findAll();
     }
+
+    @Override
+    public Ruta findByWord(String o) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
