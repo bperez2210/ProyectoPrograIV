@@ -18,7 +18,7 @@
     </head>
     <body>
         <div id="encabezado">
-            <h3>Aero-Tickets</h3>
+            <h3>Aero-Admin</h3>
             <img src="../../imagenes/inicio/avion.gif" alt=""/>
         </div>
         <div id="navBar">
