@@ -37,6 +37,7 @@ and open the template in the editor.
 
 #navBar{
     position: relative;
+    width: 100%
 }
 
 #menuLogSign button{
@@ -77,12 +78,12 @@ and open the template in the editor.
 .banner{
     position: relative; top: -20px;
     left: 0;
-    height: 200px;
+    height: 250px;
     width: 100%;
 }
   .carousel-inner > .item > img{
       width: 100%;
-      height: 200px;
+      height: 250px;
   }
   
   .mapa{
