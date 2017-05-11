@@ -15,7 +15,17 @@ $(function () {
         minView: 2,
         forceParse: 0
     });
-
-
 });
+
+$(document).ready(function () {
+});
+
+function logueo(){
+    mostrarModal("myModal", "Espere por favor..", "Cargando información de Usuario");
+}
+
+function registro(){
+    mostrarModal("myModal", "Espere por favor..", "Registrando información de Usuario");
+}
+
 

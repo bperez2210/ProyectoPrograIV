@@ -218,7 +218,7 @@
                                 </div>
                                 <div class="modal-footer buttonOpt" >
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-primary">Registrarse</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="registro()">Registrarse</button>
                                 </div>
                             </form>
                         </div>
@@ -262,7 +262,7 @@
                                     </div>
                                 </div><div class="modal-footer buttonOpt" >
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-primary">Ingresar</button>
+                                    <button type="button" class="btn btn-primary" onclick="logueo()" data-dismiss="modal">Ingresar</button>
                                 </div>
                             </form>
                         </div>
