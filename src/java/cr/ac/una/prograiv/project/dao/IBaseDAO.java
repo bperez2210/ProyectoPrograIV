@@ -18,5 +18,6 @@ public interface IBaseDAO <T,K>{ // K = key ,  T = objeto T generico
     public abstract T merge (T o);
     public abstract void delete (T o);
     public abstract T findById(K key);
+    public abstract T findByWord(String key);
     public abstract List<T> findAll();
 }

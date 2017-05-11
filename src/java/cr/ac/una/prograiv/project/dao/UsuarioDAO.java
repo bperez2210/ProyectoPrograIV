@@ -70,17 +70,32 @@ public class UsuarioDAO extends HibernateUtil implements IBaseDAO<Usuario,Intege
         }
         return usuarios;
     }
-
+    
     @Override
     public List<Usuario> findAll() {
         List<Usuario> listaUsuario;
         try{
         iniciarOperacion();
-        listaUsuario = getSesion().createQuery("select * from Usuario").list();
+        listaUsuario = getSesion().createQuery("from Usuario").list();
         }finally{
             getSesion().close();
         }
         return listaUsuario;
     }
-    
+
+    @Override
+    public Usuario findByWord(String key) {
+        Usuario usuarios = null;
+        List<Usuario> listaUsuario;
+        try{
+        iniciarOperacion();
+        listaUsuario = getSesion().createQuery("from Usuario where nombreUsuario = '" + key + "'").list();
+        if(listaUsuario != null){
+            usuarios=listaUsuario.get(0);
+        }
+        }finally{
+            getSesion().close();
+        }
+        return usuarios;    
+    }
 }

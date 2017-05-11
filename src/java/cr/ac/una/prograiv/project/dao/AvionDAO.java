@@ -82,5 +82,10 @@ public class AvionDAO extends HibernateUtil implements IBaseDAO<Avion,Integer>{ 
         }
         return listaAvion;
     }
+
+    @Override
+    public Avion findByWord(String key) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

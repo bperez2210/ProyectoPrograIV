@@ -15,7 +15,7 @@ and open the template in the editor.
         <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     </head>
-    <body>
+    <body class="bg-success">
         <div id="encabezado">
             <h3>Aero-Tickets</h3>
             <img src="../imagenes/inicio/avion.gif" alt=""/>
@@ -73,5 +73,121 @@ and open the template in the editor.
              <b> Teléfonos:</b> <br>8998-9889<br>8888-8888 <br>
              <b>Correos:</b> <br> aerotiquets12@gmail.com <br> viajetiquets23@hotmail.com <br>
         </div>
+        <div class="container">
+            <!-- Modal -->
+            <div class="modal fade" id="myModalRegistro" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Inscripción Usuario</h4>
+                        </div>
+                        <div class="modal-body" id="modalForm">
+                            <form class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label for="usuario" class="col-lg-2 control-label">Usuario</label>
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control" id="usuario_sign"
+                                               placeholder="Usuario">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="correo" class="col-lg-2 control-label">Correo</label>
+                                    <div class="col-lg-2">
+                                        <input type="email" class="form-control" id="correo_sign"
+                                               placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-lg-2 control-label">Contraseña</label>
+                                    <div class="col-lg-2">
+                                        <input type="password" class="form-control" id="password_sign"
+                                               placeholder="Contraseña">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password_confirm" class="col-lg-2 control-label">Confirmar contraseña</label>
+                                    <div class="col-lg-2">
+                                        <input type="password" id="password_confirm_sign" 
+                                               class="form-control" placeholder="Contraseña">
+                                    </div>
+                                </div>
+                                <div class="form-group" id="inputAux">
+                                    <label for="nombre_apellidos" class="col-xs-1 control-label">Nombre</label>
+                                    <div class="col-xs-3">
+                                        <input type="text" id="primer_ap_sign" class="form-control" placeholder="Primer Apellido">
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="text" id="segundo_ap_sign" class="form-control" placeholder="Segundo Apellido">
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="text" id="nombre_sign" class="form-control" placeholder="Nombre">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pais" class="col-lg-2 control-label">Nacionalidad</label>
+                                    <div class="col-xs-4">
+                                        <select class="form-control">
+                                            <option>Elige un país</option>
+                                            <option>Costa Rica</option>
+                                            <option>Nicaragua</option>
+                                            <option>Omán</option>
+                                            <option>Sudáfrica</option>
+                                            <option>Zambia</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="direccion" class="col-xs-2 control-label">Dirección</label>
+                                    <div class="col-xs-3">
+                                        <input type="text" id="ciudad" class="form-control" placeholder="Ciudad">
+                                    </div>
+                                </div>
+                                <div class="modal-footer buttonOpt" >
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-primary">Registrarse</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  <!--Registro-->
+        <div class="container">
+            <!-- Modal -->
+            <div class="modal fade" id="myModalIngreso" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Ingreso Usuario</h4>
+                        </div>
+                        <div class="modal-body" id="modalForm">
+                            <form class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label for="usuario" class="col-lg-2 control-label">Usuario</label>
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control" id="usuario_sign"
+                                               placeholder="Usuario">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-lg-2 control-label">Contraseña</label>
+                                    <div class="col-lg-2">
+                                        <input type="password" class="form-control" id="password_sign"
+                                               placeholder="Contraseña">
+                                    </div>
+                                </div><div class="modal-footer buttonOpt" >
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-primary">Ingresar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  <!--Ingreso-->
     </body>
 </html>
