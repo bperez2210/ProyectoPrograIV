@@ -60,6 +60,18 @@ and open the template in the editor.
     width: 300%;
 }
 
+.glyphiconIngreso{
+    left: 305%;
+    top: -20px;
+}
+
+.userIngreso{
+    position: relative; left: 30%;
+    width: 35%;
+    height: 35%;
+    padding-bottom: 10%;
+}
+
 #inputAux label{
     margin-right: 5%;
 }
@@ -70,7 +82,17 @@ and open the template in the editor.
 
 .buttonOpt{
     width: 598px;
-    margin-left: -45px;
+    margin-left: -5.8%;
+}
+
+.sizeLabel{
+    width: 20%
+}
+
+.buttonDate{
+    position: relative;
+    left: 135%;
+    top: -0.3px;
 }
 /**************************************************/
 
@@ -78,12 +100,12 @@ and open the template in the editor.
 .banner{
     position: relative; top: -20px;
     left: 0;
-    height: 250px;
+    height: 300px;
     width: 100%;
 }
   .carousel-inner > .item > img{
       width: 100%;
-      height: 250px;
+      height: 300px;
   }
   
   .mapa{

@@ -15,12 +15,46 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+        <script src="js/datetimepicker.js" type="text/javascript"></script>
+        <script src="js/utils.js" type="text/javascript"></script>
+        <script src="js/InicioJS.js" type="text/javascript"></script>
     </head>
     <body class="bg-success">
+
+        <!-- ********************************************************** -->
+        <!-- MODAL PARA MOSTRAR MENSAJES  -->
+        <!-- ********************************************************** -->
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" id="myModalTitle">Modal Header</h4>
+                    </div>
+                    <div class="modal-body" id="myModalMessage">
+                        <p>This is a small modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ********************************************************** -->
+        <!-- ENCABEZADO -->
+        <!-- ********************************************************** -->
+
         <div id="encabezado">
             <h3>Aero-Tickets</h3>
             <img src="imagenes/inicio/avion.gif" alt=""/>
         </div>
+
+        <!-- ********************************************************** -->
+        <!-- MENU -->
+        <!-- ********************************************************** -->
+
         <div id="navBar">
             <nav class="navbar navbar-inverse" role="navigation">
                 <div class="navbar-header">
@@ -36,9 +70,9 @@
                     <ul class="nav navbar-nav">
                         <li><a href="InicioJSP.jsp">Inicio</a></li>
                         <li><a href="#">Vuelos</a></li>
-                        <li><a href="pags/QuienesSomosJSP.html">Quiénes Somos</a></li>
+                        <li><a href="pags/QuienesSomosJSP.jsp">Quiénes Somos</a></li>
                         <li><a href="#">Referencias</a></li>
-                        <li><a href="pags/ContactenosJSP.html">Contacto</a></li>
+                        <li><a href="pags/ContactenosJSP.jsp">Contacto</a></li>
                     </ul>
                     <form class="navbar-form navbar-left">
                         <div class="form-group">
@@ -53,6 +87,11 @@
                 </div>
             </nav> <!--Navbar-->
         </div>
+
+        <!-- ********************************************************** -->
+        <!-- BANNER CAROUSEL -->
+        <!-- ********************************************************** -->
+
         <div id="myCarousel" class="banner carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -92,6 +131,11 @@
                 <span class="sr-only">Siguiente</span>
             </a>
         </div>  <!--Slider-->
+
+        <!-- ********************************************************** -->
+        <!-- MODAL FORMULARIO REGISTRO -->
+        <!-- ********************************************************** -->
+
         <div class="container">
             <!-- Modal -->
             <div class="modal fade" id="myModalRegistro" role="dialog">
@@ -157,6 +201,15 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div class="form-group " id="groupfechaNacimiento">
+                                    <label for="dpFechaNacimiento" class="col-xs-4">Fecha Nacimiento:</label>
+                                    <div id="dpFechaNacimiento" class="input-group date form_date sizeLabel" data-date="" data-date-format="dd/mm/yyyy" data-link-field="dtp_input2" data-link-format="dd/mm/yyyy">
+                                        <input class="form-control sizeLabel" type="text" value="" readonly placeholder="dd/mm/aaaa" id="dpFechaNacimientoText">
+                                        <span class="input-group-addon buttonDate">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
                                 <div class="form-group">
                                     <label for="direccion" class="col-xs-2 control-label">Dirección</label>
                                     <div class="col-xs-3">
@@ -173,6 +226,12 @@
                 </div>
             </div>
         </div>  <!--Registro-->
+
+        <!-- ********************************************************** -->
+        <!-- MODAL INGRESO LOGIN -->
+        <!-- ********************************************************** -->
+
+
         <div class="container">
             <!-- Modal -->
             <div class="modal fade" id="myModalIngreso" role="dialog">
@@ -186,17 +245,20 @@
                         <div class="modal-body" id="modalForm">
                             <form class="form-horizontal" role="form">
                                 <div class="form-group">
+                                    <div>
+                                        <img src="imagenes/inicio/user-login-man-person-512.png" alt="" class="userIngreso"/>
+                                    </div>
                                     <label for="usuario" class="col-lg-2 control-label">Usuario</label>
                                     <div class="col-lg-2">
-                                        <input type="text" class="form-control" id="usuario_sign"
-                                               placeholder="Usuario">
+                                        <input type="text" class="form-control " id="usuario_sign" placeholder="Usuario">
+                                        <div class="glyphicon glyphicon-user glyphiconIngreso" ></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="col-lg-2 control-label">Contraseña</label>
                                     <div class="col-lg-2">
-                                        <input type="password" class="form-control" id="password_sign"
-                                               placeholder="Contraseña">
+                                        <input type="password" class="form-control glyphicon glyphicon-lock" id="password_sign" placeholder="Contraseña">    
+                                        <div class="glyphicon glyphicon-lock glyphiconIngreso" ></div>
                                     </div>
                                 </div><div class="modal-footer buttonOpt" >
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -207,25 +269,7 @@
                     </div>
                 </div>
             </div>
-        </div>  <!--Ingreso-->
-        <div align="center" class="table-responsive">
-            <table class="table table-striped">
-                <caption>Aviones</caption>
-                <thead>
-                    <tr>
-                        <th>IDENTIFICADOR</th>
-                        <th>AÑO</th>
-                        <th>MODELO</th>
-                        <th>MARCA</th>
-                        <th>CANT. PASAJEROS</th>
-                        <th>CANT. FILAS</th>
-                        <th>CANT. ASINTOS POR FILA</th>
-                    </tr>
-                </thead>
-                <tbody id="listado"></tbody> <!-- donde se muestra la informacion -->
-            </table>
-        </div>
-        <div></div>
+        </div> 
     </body>
 </html>
 

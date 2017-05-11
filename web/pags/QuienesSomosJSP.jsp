@@ -1,13 +1,15 @@
+<%-- 
+    Document   : QuienesSomosJSP
+    Created on : 11/05/2017, 05:17:11 PM
+    Author     : admin
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>ReservacionesCR</title>
-        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Quienes Somos</title>
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -16,10 +18,42 @@ and open the template in the editor.
         <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body class="bg-success">
+        
+        
+        <!-- ********************************************************** -->
+        <!-- MODAL PARA MOSTRAR MENSAJES  -->
+        <!-- ********************************************************** -->
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" id="myModalTitle">Modal Header</h4>
+                    </div>
+                    <div class="modal-body" id="myModalMessage">
+                        <p>This is a small modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ********************************************************** -->
+        <!-- ENCABEZADO  -->
+        <!-- ********************************************************** -->
+        
         <div id="encabezado">
             <h3>Aero-Tickets</h3>
             <img src="../imagenes/inicio/avion.gif" alt=""/>
         </div>
+        
+        <!-- ********************************************************** -->
+        <!-- MENU  -->
+        <!-- ********************************************************** -->
+        
         <div id="navBar">
             <nav class="navbar navbar-inverse" role="navigation">
                 <div class="navbar-header">
@@ -35,9 +69,9 @@ and open the template in the editor.
                     <ul class="nav navbar-nav">
                         <li><a href="../InicioJSP.jsp">Inicio</a></li>
                         <li><a href="#">Vuelos</a></li>
-                        <li><a href="QuienesSomosJSP.html">Quiénes Somos</a></li>
+                        <li><a href="QuienesSomosJSP.jsp">Quiénes Somos</a></li>
                         <li><a href="#">Referencias</a></li>
-                        <li><a href="ContactenosJSP.html">Contacto</a></li>
+                        <li><a href="ContactenosJSP.jsp">Contacto</a></li>
                     </ul>
                     <form class="navbar-form navbar-left">
                         <div class="form-group">
@@ -52,6 +86,12 @@ and open the template in the editor.
                 </div>
             </nav>
         </div>  <!--Navbar-->
+        
+        
+        <!-- ********************************************************** -->
+        <!-- REGISTRO DE USUARIOS  -->
+        <!-- ********************************************************** -->
+        
         <div class="container">
             <!-- Modal -->
             <div class="modal fade" id="myModalRegistro" role="dialog">
@@ -117,6 +157,15 @@ and open the template in the editor.
                                         </select>
                                     </div>
                                 </div>
+                                <div class="form-group " id="groupfechaNacimiento">
+                                    <label for="dpFechaNacimiento" class="col-xs-4">Fecha Nacimiento:</label>
+                                    <div id="dpFechaNacimiento" class="input-group date form_date sizeLabel" data-date="" data-date-format="dd/mm/yyyy" data-link-field="dtp_input2" data-link-format="dd/mm/yyyy">
+                                        <input class="form-control sizeLabel" type="text" value="" readonly placeholder="dd/mm/aaaa" id="dpFechaNacimientoText">
+                                        <span class="input-group-addon buttonDate">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
                                 <div class="form-group">
                                     <label for="direccion" class="col-xs-2 control-label">Dirección</label>
                                     <div class="col-xs-3">
@@ -133,6 +182,12 @@ and open the template in the editor.
                 </div>
             </div>
         </div>  <!--Registro-->
+
+        <!-- ********************************************************** -->
+        <!-- MODAL INGRESO LOGIN -->
+        <!-- ********************************************************** -->
+
+
         <div class="container">
             <!-- Modal -->
             <div class="modal fade" id="myModalIngreso" role="dialog">
@@ -146,17 +201,20 @@ and open the template in the editor.
                         <div class="modal-body" id="modalForm">
                             <form class="form-horizontal" role="form">
                                 <div class="form-group">
+                                    <div>
+                                        <img src="../imagenes/inicio/user-login-man-person-512.png" alt="" class="userIngreso"/>
+                                    </div>
                                     <label for="usuario" class="col-lg-2 control-label">Usuario</label>
                                     <div class="col-lg-2">
-                                        <input type="text" class="form-control" id="usuario_sign"
-                                               placeholder="Usuario">
+                                        <input type="text" class="form-control " id="usuario_sign" placeholder="Usuario">
+                                        <div class="glyphicon glyphicon-user glyphiconIngreso" ></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="col-lg-2 control-label">Contraseña</label>
                                     <div class="col-lg-2">
-                                        <input type="password" class="form-control" id="password_sign"
-                                               placeholder="Contraseña">
+                                        <input type="password" class="form-control glyphicon glyphicon-lock" id="password_sign" placeholder="Contraseña">    
+                                        <div class="glyphicon glyphicon-lock glyphiconIngreso" ></div>
                                     </div>
                                 </div><div class="modal-footer buttonOpt" >
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -167,7 +225,13 @@ and open the template in the editor.
                     </div>
                 </div>
             </div>
-        </div>  <!--Ingreso-->
+        </div>
+        
+        <!-- ********************************************************** -->
+        <!-- INFO  -->
+        <!-- ********************************************************** -->
+        
+        
         <div class="col-sm-6 col-md-6 col-lg-6 espacio1 bg-success">
             <p class="titulos1">Visión</p>
             <p class="texto">
@@ -256,4 +320,3 @@ and open the template in the editor.
 
     </body>
 </html>
-
