@@ -14,10 +14,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="css/datetimepicker.min.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
         <script src="js/datetimepicker.js" type="text/javascript"></script>
         <script src="js/utils.js" type="text/javascript"></script>
-        <script src="js/UsuariosJS.js" type="text/javascript"></script>
+        <script src="js/PublicoJS.js" type="text/javascript"></script>
     </head>
     <body class="bg-success">
 
@@ -70,9 +71,9 @@
                     <ul class="nav navbar-nav">
                         <li><a href="InicioJSP.jsp">Inicio</a></li>
                         <li><a href="#">Vuelos</a></li>
-                        <li><a href="pags/QuienesSomosJSP.jsp">Quiénes Somos</a></li>
+                        <li><a href="QuienesSomosJSP.jsp">Quiénes Somos</a></li>
                         <li><a href="#">Referencias</a></li>
-                        <li><a href="pags/ContactenosJSP.jsp">Contacto</a></li>
+                        <li><a href="ContactenosJSP.jsp">Contacto</a></li>
                     </ul>
                     <form class="navbar-form navbar-left">
                         <div class="form-group">
@@ -148,28 +149,28 @@
                         </div>
                         <div class="modal-body" id="modalForm">
                             <form class="form-horizontal" role="form">
-                                <div class="form-group">
+                                <div class="form-group" id="groupusuario">
                                     <label for="usuario" class="col-lg-2 control-label">Usuario</label>
                                     <div class="col-lg-2">
                                         <input type="text" class="form-control" id="usuario_sign"
                                                placeholder="Usuario">
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" id="groupcorreo">
                                     <label for="correo" class="col-lg-2 control-label">Correo</label>
                                     <div class="col-lg-2">
                                         <input type="email" class="form-control" id="correo_sign"
                                                placeholder="Email">
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" id="grouppassword">
                                     <label for="password" class="col-lg-2 control-label">Contraseña</label>
                                     <div class="col-lg-2">
                                         <input type="password" class="form-control" id="password_sign"
                                                placeholder="Contraseña">
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" id="grouppasswordConfirm">
                                     <label for="password_confirm" class="col-lg-2 control-label">Confirmar contraseña</label>
                                     <div class="col-lg-2">
                                         <input type="password" id="password_confirm_sign" 
@@ -178,19 +179,19 @@
                                 </div>
                                 <div class="form-group" id="inputAux">
                                     <label for="nombre_apellidos" class="col-xs-1 control-label">Nombre</label>
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-3" id="groupprimerApellido">
                                         <input type="text" id="primer_ap_sign" class="form-control" placeholder="Primer Apellido">
                                     </div>
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-3" id="groupsegundoApellido">
                                         <input type="text" id="segundo_ap_sign" class="form-control" placeholder="Segundo Apellido">
                                     </div>
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-3" id="groupnombre">
                                         <input type="text" id="nombre_sign" class="form-control" placeholder="Nombre">
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" id="groupnacionalidad">
                                     <label for="pais" class="col-lg-2 control-label">Nacionalidad</label>
-                                    <div class="col-xs-4">
+                                    <div class="col-xs-4" id="nacionalidad_sign">
                                         <select class="form-control">
                                             <option>Elige un país</option>
                                             <option>Costa Rica</option>
@@ -210,15 +211,21 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" id="groupdireccion">
                                     <label for="direccion" class="col-xs-2 control-label">Dirección</label>
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-3" id="direccion_sign">
                                         <input type="text" id="ciudad" class="form-control" placeholder="Ciudad">
                                     </div>
                                 </div>
                                 <div class="modal-footer buttonOpt" >
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="registro()">Registrarse</button>
+                                    <button type="button" class="btn btn-primary" onclick="registro()">Registrarse</button>
+                                </div>
+                                <div class="form-group" >
+                                    <div class="alert alert-success" id="mesageRegistro">
+                                        <strong class="mesajeResultNeg">Info!</strong> 
+                                        <span class="mesajeResultText">This alert box could indicate a neutral informative change or action.</span>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -250,26 +257,26 @@
                                     </div>
                                     <label for="usuario" class="col-lg-2 control-label">Usuario</label>
                                     <div class="col-lg-2">
-                                        <input type="text" class="form-control " id="user_sign" placeholder="Usuario">
+                                        <input type="text" class="form-control " id="usuario_login" placeholder="Usuario">
                                         <div class="glyphicon glyphicon-user glyphiconIngreso" ></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="col-lg-2 control-label">Contraseña</label>
                                     <div class="col-lg-2">
-                                        <input type="password" class="form-control glyphicon glyphicon-lock" id="contras_sign" placeholder="Contraseña">    
+                                        <input type="password" class="form-control glyphicon glyphicon-lock" id="password_login" placeholder="Contraseña">    
                                         <div class="glyphicon glyphicon-lock glyphiconIngreso" ></div>
                                     </div>
                                 </div><div class="modal-footer buttonOpt" >
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-primary" onclick="logueo()">Ingresar</button>
+                                    <button type="button" class="btn btn-primary" onclick="logueo()" data-dismiss="modal">Ingresar</button>
                                 </div>
                                 <div class="form-group" >
-                                <div class="alert alert-success" id="mesajeResult">
-                                    <strong id="mesajeResultNeg">Info!</strong> 
-                                    <span id="mesajeResultText">This alert box could indicate a neutral informative change or action.</span>
+                                    <div class="alert alert-success " id="mesajeLogin">
+                                        <strong class="mesajeResultNeg">Info!</strong> 
+                                        <span class="mesajeResultText">This alert box could indicate a neutral informative change or action.</span>
+                                    </div>
                                 </div>
-                            </div>
                             </form>
                         </div>
                     </div>

@@ -74,9 +74,9 @@
                                 <li><a href="#">Horarios</a></li>
                             </ul>
                         </li>
-                    </ul>
+                    </ul>             
                     <div class="nav navbar-nav navbar-right" id="menuLogSign">
-                        <button type="button" class="btn btn-danger glyphicon glyphicon-log-in" data-toggle="modal" data-target="#"> Cerrar sesión</button>
+                        <button type="button" class="btn btn-danger glyphicon glyphicon-log-in"> Cerrar sesión</button>
                     </div>
                 </div>
             </nav> <!--Navbar-->

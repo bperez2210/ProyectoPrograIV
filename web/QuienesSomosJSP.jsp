@@ -15,7 +15,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
-        <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="css/datetimepicker.min.css" rel="stylesheet" type="text/css"/>
+        <script src="js/datetimepicker.js" type="text/javascript"></script>
+        <script src="js/utils.js" type="text/javascript"></script>
+        <script src="js/PublicoJS.js" type="text/javascript"></script>
     </head>
     <body class="bg-success">
         
@@ -47,7 +51,7 @@
         
         <div id="encabezado">
             <h3>Aero-Tickets</h3>
-            <img src="../imagenes/inicio/avion.gif" alt=""/>
+            <img src="imagenes/inicio/avion.gif" alt=""/>
         </div>
         
         <!-- ********************************************************** -->
@@ -67,7 +71,7 @@
                 </div>
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="../InicioJSP.jsp">Inicio</a></li>
+                        <li><a href="InicioJSP.jsp">Inicio</a></li>
                         <li><a href="#">Vuelos</a></li>
                         <li><a href="QuienesSomosJSP.jsp">Quiénes Somos</a></li>
                         <li><a href="#">Referencias</a></li>
@@ -174,7 +178,13 @@
                                 </div>
                                 <div class="modal-footer buttonOpt" >
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-primary">Registrarse</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="registro()">Registrarse</button>
+                                </div>
+                                <div class="form-group" >
+                                    <div class="alert alert-success" id="mesageRegistro">
+                                        <strong class="mesajeResultNeg">Info!</strong> 
+                                        <span class="mesajeResultText">This alert box could indicate a neutral informative change or action.</span>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -186,8 +196,7 @@
         <!-- ********************************************************** -->
         <!-- MODAL INGRESO LOGIN -->
         <!-- ********************************************************** -->
-
-
+        
         <div class="container">
             <!-- Modal -->
             <div class="modal fade" id="myModalIngreso" role="dialog">
@@ -202,23 +211,29 @@
                             <form class="form-horizontal" role="form">
                                 <div class="form-group">
                                     <div>
-                                        <img src="../imagenes/inicio/user-login-man-person-512.png" alt="" class="userIngreso"/>
+                                        <img src="imagenes/inicio/user-login-man-person-512.png" alt="" class="userIngreso"/>
                                     </div>
                                     <label for="usuario" class="col-lg-2 control-label">Usuario</label>
                                     <div class="col-lg-2">
-                                        <input type="text" class="form-control " id="usuario_sign" placeholder="Usuario">
+                                        <input type="text" class="form-control " id="usuario_login" placeholder="Usuario">
                                         <div class="glyphicon glyphicon-user glyphiconIngreso" ></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="col-lg-2 control-label">Contraseña</label>
                                     <div class="col-lg-2">
-                                        <input type="password" class="form-control glyphicon glyphicon-lock" id="password_sign" placeholder="Contraseña">    
+                                        <input type="password" class="form-control glyphicon glyphicon-lock" id="password_login" placeholder="Contraseña">    
                                         <div class="glyphicon glyphicon-lock glyphiconIngreso" ></div>
                                     </div>
                                 </div><div class="modal-footer buttonOpt" >
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-primary">Ingresar</button>
+                                    <button type="button" class="btn btn-primary" onclick="logueo()" data-dismiss="modal">Ingresar</button>
+                                </div>
+                                <div class="form-group" >
+                                    <div class="alert alert-success" id="mesajeLogin">
+                                        <strong class="mesajeResultNeg">Info!</strong> 
+                                        <span class="mesajeResultText">This alert box could indicate a neutral informative change or action.</span>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -248,7 +263,7 @@
         </div>
         <br></br>
         <div class="col-sm-4 col-md-4 col-lg-4 espacio2 bg-success" >
-            <img class="img-rounded center-block" src="../imagenes/Extras/imagen3.jpg" alt=""/>
+            <img class="img-rounded center-block" src="imagenes/Extras/imagen3.jpg" alt=""/>
         </div>
         <div class="col-sm-4 col-md-4 col-lg-4 espacio2 bg-success">
             <p class="titulos2">Quiénes somos</p>
@@ -262,7 +277,7 @@
                 para todos nuestros clientes.</p>
         </div>
         <div class="col-sm-4 col-md-4 col-lg-4 espacio2 bg-success" >
-            <img class="img-rounded center-block" src="../imagenes/Extras/imagen1.jpg" alt=""/>
+            <img class="img-rounded center-block" src="imagenes/Extras/imagen1.jpg" alt=""/>
         </div>
         <br></br>
         <div class="col-sm-4 col-md-4 espacio3 col-lg-4 bg-success">
@@ -282,7 +297,7 @@
                 hoteles y coches mediante nuestra pàgina. Eso será el mayor éxito que podemos conseguir. 
                 Nos debemos a nuestros clientes y por ellos las mejoras en nuestra página serán 
                 constantes.</p>
-            <img class="img-rounded center-block" src="../imagenes/Extras/imagen2.jpg" alt=""/> 
+            <img class="img-rounded center-block" src="imagenes/Extras/imagen2.jpg" alt=""/> 
         </div>
         <div class="col-sm-4 col-md-4 espacio3 col-lg-4 bg-success">
             <p class="titulos1">Cómo lo hacemos</p>

@@ -26,8 +26,8 @@ public class PruebaUsuarios {
     }
     
     public static void testSave(){
-        Usuario u2 = new Usuario("0000","bperez2210","Bryan","Perez","sdfdsfs","Lobo",new Date(),true);
-//        Usuario u2 = new Usuario("admin","admin","David","Lobo", "15646546", "Bryan", new Date(),true);
+//        Usuario u2 = new Usuario("0000","bperez2210","Bryan","Perez","sdfdsfs","Lobo",new Date(),true);
+        Usuario u2 = new Usuario("admin","admin","David","Lobo", "15646546", "Bryan", new Date(),true);
 //        UsuarioDAO pDao = new UsuarioDAO();
         UsuarioBL pDao = new UsuarioBL();
 //        uBL.save(u2);
