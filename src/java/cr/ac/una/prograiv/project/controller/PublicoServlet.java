@@ -20,8 +20,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author admin
  */
-@WebServlet(name = "UsuariosServlet", urlPatterns = {"/UsuariosServlet"})
-public class UsuariosServlet extends HttpServlet {
+@WebServlet(name = "PublicoServlet", urlPatterns = {"/PublicoServlet"})
+public class PublicoServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,17 +36,16 @@ public class UsuariosServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            String json;
             Usuario usuario = new Usuario();
             UsuarioBL uBL = new UsuarioBL();
-            
             HttpSession session = request.getSession();
             String accion = request.getParameter("accion");
+            Thread.sleep(1000);
             
             switch(accion){
                 case "loginUsuario":
                     usuario = uBL.findByNombreUsuario(request.getParameter("nombreUsuario"));
-                    if(usuario==null){ out.print("E~Usuario no existe en el sistema");}
+                    if(usuario==null){ out.print("E~Usuario no registrado en el sistema");}
                     if(usuario != null){
                         if(!usuario.getContrasena().equals(request.getParameter("contrasena"))){
                              out.print("E~Usuario o contraseña incorrectos");

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : QuienesSomosJSP
-    Created on : 11/05/2017, 05:17:11 PM
+    Document   : ContactenosJSP
+    Created on : 11/05/2017, 05:07:12 PM
     Author     : admin
 --%>
 
@@ -9,16 +9,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Quienes Somos</title>
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <title>Contactenos</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="css/datetimepicker.min.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
-        <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
+        <script src="js/datetimepicker.js" type="text/javascript"></script>
+        <script src="js/utils.js" type="text/javascript"></script>
+        <script src="js/PublicoJS.js" type="text/javascript"></script>
     </head>
     <body class="bg-success">
-        
         
         <!-- ********************************************************** -->
         <!-- MODAL PARA MOSTRAR MENSAJES  -->
@@ -47,30 +49,23 @@
         
         <div id="encabezado">
             <h3>Aero-Tickets</h3>
-            <img src="../imagenes/inicio/avion.gif" alt=""/>
+            <img src="imagenes/inicio/avion.gif" alt=""/>
         </div>
         
         <!-- ********************************************************** -->
         <!-- MENU  -->
         <!-- ********************************************************** -->
         
+        
         <div id="navBar">
-            <nav class="navbar navbar-inverse" role="navigation">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse"
-                            data-target=".navbar-ex1-collapse">
-                        <span class="sr-only">Desplegar navegación</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse navbar-ex1-collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="../InicioJSP.jsp">Inicio</a></li>
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">                        
+                        <li><a href="InicioJSP.jsp">Inicio</a></li>
                         <li><a href="#">Vuelos</a></li>
                         <li><a href="QuienesSomosJSP.jsp">Quiénes Somos</a></li>
                         <li><a href="#">Referencias</a></li>
+                        
                         <li><a href="ContactenosJSP.jsp">Contacto</a></li>
                     </ul>
                     <form class="navbar-form navbar-left">
@@ -80,12 +75,47 @@
                         <button type="submit" class="btn btn-default">Buscar</button>
                     </form>
                     <ul class="nav navbar-nav navbar-right" id="menuLogSign">
-                        <li><button type="button" class="btn btn-info glyphicon glyphicon-user" data-toggle="modal" data-target="#myModalRegistro"> Registrarse</button></li>
+                        <li><button type="button" class="btn btn-info glyphicon glyphicon-user" data-toggle="modal" data-target="#myModalRegistro">Registrarse</button></li>
                         <li><button type="button" class="btn btn-success glyphicon glyphicon-log-in" data-toggle="modal" data-target="#myModalIngreso"> Entrar</button></li>
                     </ul>
                 </div>
             </nav>
-        </div>  <!--Navbar-->
+        </div>  <!--Navbar-->    
+        <!----> <h3 class="modal-title oficinas">Oficinas</h3>
+        
+        <!-- ********************************************************** -->
+        <!-- MAPA  -->
+        <!-- ********************************************************** -->
+        
+        <div class="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62867.597373497214!2d-84.23890192212515!3d9.998277992852325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0f9a32e823a41%3A0xc545f9616eaf5b01!2sAeropuerto+Internacional+Juan+Santamar%C3%ADa!5e0!3m2!1ses!2scr!4v1492556102764" width="570" height="350" allowfullscreen></iframe>       
+        </div>
+               <div class="contacto">            
+             <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre">
+                </div>
+                 <div class="form-group">
+                     <label for="correo">Correo</label>
+                     <input type="text" class="form-control" id="correo" placeholder="Correo">
+                 </div>
+                 <div class="checkbox">
+                     <label>
+                         <input type="checkbox">Recordar
+                     </label>
+                 </div>
+                 <div class="form-group">
+                     <label for="escribanos">Escribanos</label>
+                     <input type="text" id="escribanos">
+                     <p class="help-block">Solo texto.</p>
+                 </div> 
+             </form>
+             <button type="submit" class="btn btn-primary enviar">Enviar</button>
+             <br>
+             <b> Teléfonos:</b> <br>8998-9889<br>8888-8888 <br>
+             <b>Correos:</b> <br> aerotiquets12@gmail.com <br> viajetiquets23@hotmail.com <br>
+        </div>
         
         
         <!-- ********************************************************** -->
@@ -174,7 +204,13 @@
                                 </div>
                                 <div class="modal-footer buttonOpt" >
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-primary">Registrarse</button>
+                                    <button type="button" class="btn btn-primary"  onclick="registro()">Registrarse</button>
+                                </div>
+                                <div class="form-group" >
+                                    <div class="alert alert-success" id="mesageRegistro">
+                                        <strong class="mesajeResultNeg">Info!</strong> 
+                                        <span class="mesajeResultText">This alert box could indicate a neutral informative change or action.</span>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -186,8 +222,7 @@
         <!-- ********************************************************** -->
         <!-- MODAL INGRESO LOGIN -->
         <!-- ********************************************************** -->
-
-
+        
         <div class="container">
             <!-- Modal -->
             <div class="modal fade" id="myModalIngreso" role="dialog">
@@ -202,23 +237,29 @@
                             <form class="form-horizontal" role="form">
                                 <div class="form-group">
                                     <div>
-                                        <img src="../imagenes/inicio/user-login-man-person-512.png" alt="" class="userIngreso"/>
+                                        <img src="imagenes/inicio/user-login-man-person-512.png" alt="" class="userIngreso"/>
                                     </div>
                                     <label for="usuario" class="col-lg-2 control-label">Usuario</label>
                                     <div class="col-lg-2">
-                                        <input type="text" class="form-control " id="usuario_sign" placeholder="Usuario">
+                                        <input type="text" class="form-control " id="usuario_login" placeholder="Usuario">
                                         <div class="glyphicon glyphicon-user glyphiconIngreso" ></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="col-lg-2 control-label">Contraseña</label>
                                     <div class="col-lg-2">
-                                        <input type="password" class="form-control glyphicon glyphicon-lock" id="password_sign" placeholder="Contraseña">    
+                                        <input type="password" class="form-control glyphicon glyphicon-lock" id="password_login" placeholder="Contraseña">    
                                         <div class="glyphicon glyphicon-lock glyphiconIngreso" ></div>
                                     </div>
                                 </div><div class="modal-footer buttonOpt" >
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-primary">Ingresar</button>
+                                    <button type="button" class="btn btn-primary" onclick="logueo()" data-dismiss="modal">Ingresar</button>
+                                </div>
+                                <div class="form-group" >
+                                    <div class="alert alert-success" id="mesajeLogin">
+                                        <strong class="mesajeResultNeg">Info!</strong> 
+                                        <span class="mesajeResultText">This alert box could indicate a neutral informative change or action.</span>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -226,97 +267,8 @@
                 </div>
             </div>
         </div>
-        
-        <!-- ********************************************************** -->
-        <!-- INFO  -->
-        <!-- ********************************************************** -->
-        
-        
-        <div class="col-sm-6 col-md-6 col-lg-6 espacio1 bg-success">
-            <p class="titulos1">Visión</p>
-            <p class="texto">
-                Ser la empresa emblema y orgullo a nivel mundial,
-                reconocida por su gestión pública eficiente y transparente.</p>
-        </div>
 
-        <div class="col-sm-6 col-md-6 col-lg-6 espacio1 bg-success">
-            <p class="titulos1">Misión</p>
-            <p class="texto">
-                Conectar a las personas y contribuir a la integración y al desarrollo 
-                económico y social de los países, promoviendo los territorios como 
-                destino turístico, cultural y de negocios</p>
-        </div>
-        <br></br>
-        <div class="col-sm-4 col-md-4 col-lg-4 espacio2 bg-success" >
-            <img class="img-rounded center-block" src="../imagenes/Extras/imagen3.jpg" alt=""/>
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4 espacio2 bg-success">
-            <p class="titulos2">Quiénes somos</p>
-            <p class="texto">   
-                Aero Tickets, nace con la clara vocación de dar el mejor servicio 
-                a sus clientes, tanto para las agencias de viajes, como para nuestros 
-                clientes finales. La gestación del proyecto es fruto de meses de trabajo, 
-                de horas pensando que es lo que le hace falta al mercado y con las expectativas 
-                puestas, entre otras, en mejorar el servicio a todos los profesionales del 
-                sector que hasta ahora se está dando y presentar un página fresca y sencilla 
-                para todos nuestros clientes.</p>
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4 espacio2 bg-success" >
-            <img class="img-rounded center-block" src="../imagenes/Extras/imagen1.jpg" alt=""/>
-        </div>
-        <br></br>
-        <div class="col-sm-4 col-md-4 espacio3 col-lg-4 bg-success">
-            <p class="titulos1">De dónde venimos</p>
-            <p class="texto">   
-                Nuestra experiencia en el sector nos ha llevado a arrancar este nuevo proyecto, 
-                en el cual participamos profesionales de probada experiencia en prácticamente 
-                todas las secciones que conforman el amplio sector del turismo, y mas concretamente 
-                dentro de las agencias de viajes, tales como venta tradicional de paquetes vacacionales, 
-                centros de empresas, venta de billetes on-line y lo más importante para nosotros: 
-                la atención al cliente. Queremos y creemos que estamos en condiciones de hacerlo.</p>
-        </div>
-        <div class="col-sm-4 col-md-4 espacio3 col-lg-4 bg-success">
-            <p class="titulos1">A dónde vamos</p>
-            <p class="texto">   
-                Nuestra meta es, conseguir que nuestros clientes repitan en la compra de billetes, 
-                hoteles y coches mediante nuestra pàgina. Eso será el mayor éxito que podemos conseguir. 
-                Nos debemos a nuestros clientes y por ellos las mejoras en nuestra página serán 
-                constantes.</p>
-            <img class="img-rounded center-block" src="../imagenes/Extras/imagen2.jpg" alt=""/> 
-        </div>
-        <div class="col-sm-4 col-md-4 espacio3 col-lg-4 bg-success">
-            <p class="titulos1">Cómo lo hacemos</p>
-            <p class="texto">   
-                Aero Tickets, cuenta con un buscador diseñado por Travelloop, y que nos permite 
-                ofrecer en todo momento las mejores tarifas de vuelos, hoteles y coches que existen 
-                en el mercado. La negociación con nuestros proveedores, para conseguir las mejores 
-                tarifas existentes, será algo que revisaremos a diario, para que siempre tengas lo 
-                mejor. RoundTrip Viajes ha implementado algo nuevo en las agencias que arrancan, 
-                como nosotros, que es el buscador de vuelo + hotel (llamado tambien dynamic packaging), 
-                importante herramienta que también hemos implementado con Travelloop.</p>
-        </div>
-        <div class="col-sm-3 col-md-3 col-lg-3 espacio4 bg-success" ></div>
-        <div class="col-sm-6 col-md-6 col-lg-6 espacio4 bg-success">
-            <p class="titulos2">Atención al cliente</p>
-            <p class="texto">   
-                Para Aero Tickets, el cliente es el centro de las preocupaciones para intentar 
-                ofrecerle diariamente todo aquello que necesite y poder llegar asi a la excelencia. 
-                El 100% de la plantilla de RoundTrip Viajes se dedica a sus clientes para procurar 
-                que tenga la mejor información antes, durante y después de haber reservado sus 
-                vacaciones. La comunicación con nuestros clientes es casi permanente y eso ha sido 
-                posible gracias al conocimiento y manejo, por parte de nuestro equipo, de la 
-                opciones de comunicacion con las que cuenta nuestra sociedad, ya sea mediante chat 
-                en directo, correo electrónico, Facebook o Tweeter. Cada semana nuestros clientes 
-                reciben una newsletter o boletín de ofertas, que le informan de las mejores ofertas 
-                del momento seleccionadas por nuestro Dpto. de producto, de manera gratuita.</p>
-        </div>
-        <div class="col-sm-3 col-md-3 col-lg-3 espacio4 bg-success" ></div>
-       <div class="col-sm-12 col-md-12 col-lg-12 espacio1 bg-success">
-            <p class="titulos1">Dónde estámos</p>
-            <p class="texto1">   
-                Nuestra oficina se encuentra en un lugar privilegiado y tranquilo, muy cerca del 
-                Aeropuerto Internacional Juan Santamaría en la provincia de Alajuela, San José, Costa Rica.</p>
-        </div>
 
+        
     </body>
 </html>
