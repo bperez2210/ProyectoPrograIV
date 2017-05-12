@@ -17,7 +17,7 @@
         <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
         <script src="js/datetimepicker.js" type="text/javascript"></script>
         <script src="js/utils.js" type="text/javascript"></script>
-        <script src="js/InicioJS.js" type="text/javascript"></script>
+        <script src="js/UsuariosJS.js" type="text/javascript"></script>
     </head>
     <body class="bg-success">
 
@@ -250,26 +250,32 @@
                                     </div>
                                     <label for="usuario" class="col-lg-2 control-label">Usuario</label>
                                     <div class="col-lg-2">
-                                        <input type="text" class="form-control " id="usuario_sign" placeholder="Usuario">
+                                        <input type="text" class="form-control " id="user_sign" placeholder="Usuario">
                                         <div class="glyphicon glyphicon-user glyphiconIngreso" ></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="col-lg-2 control-label">Contraseña</label>
                                     <div class="col-lg-2">
-                                        <input type="password" class="form-control glyphicon glyphicon-lock" id="password_sign" placeholder="Contraseña">    
+                                        <input type="password" class="form-control glyphicon glyphicon-lock" id="contras_sign" placeholder="Contraseña">    
                                         <div class="glyphicon glyphicon-lock glyphiconIngreso" ></div>
                                     </div>
                                 </div><div class="modal-footer buttonOpt" >
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-primary" onclick="logueo()" data-dismiss="modal">Ingresar</button>
+                                    <button type="button" class="btn btn-primary" onclick="logueo()">Ingresar</button>
                                 </div>
+                                <div class="form-group" >
+                                <div class="alert alert-success" id="mesajeResult">
+                                    <strong id="mesajeResultNeg">Info!</strong> 
+                                    <span id="mesajeResultText">This alert box could indicate a neutral informative change or action.</span>
+                                </div>
+                            </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>     
     </body>
 </html>
 

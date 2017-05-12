@@ -5,6 +5,7 @@
  */
 package cr.ac.una.prograiv.project.bl;
 import cr.ac.una.prograiv.project.domain.Usuario;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,12 +18,9 @@ public class UsuarioBL extends BaseBL implements IBaseBL<Usuario, Integer>{
     }
     @Override
     public void save(Usuario o) {
-        if(findByWord(o.getNombreUsuario())==null){
             this.getDao(o.getClass().getName()).save(o);
-        }else{
-            System.out.println("Error el Usuario ya existe");
-        }
     }
+    
     
     @Override
     public Usuario merge(Usuario o) {
@@ -46,10 +44,25 @@ public class UsuarioBL extends BaseBL implements IBaseBL<Usuario, Integer>{
     public List<Usuario> findAll(String o) {
         return this.getDao(o).findAll();
     }
+    
+    public Usuario findByNombreUsuario(String name){
+        System.out.println("Hola1");
+        List<Usuario> usuarios = findAll(Usuario.class.getName());
+        for (Usuario aux: usuarios) {
+            if(aux.getNombreUsuario().equals(name)){
+                return aux;
+            }
+        }
+        System.out.println("no lo encontre");
+        return null;
+    }
+    
 
+    
     @Override
     public Usuario findByWord(String o) {
-        return (Usuario) this.getDao(Usuario.class.getName()).findByWord(o);
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
     
 }

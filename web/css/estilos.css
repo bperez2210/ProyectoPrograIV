@@ -8,6 +8,11 @@ and open the template in the editor.
     Author     : admin
 */
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 #encabezado{
     position: relative;
     background-color: #00394d;
@@ -94,6 +99,12 @@ and open the template in the editor.
     left: 135%;
     top: -0.3px;
 }
+
+#mesajeResult{
+    margin-left: -18px;
+    width: 100%;
+}
+
 /**************************************************/
 
 

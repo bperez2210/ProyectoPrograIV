@@ -41,9 +41,9 @@ Contributor(s):
 -->
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="proyectoAerolinea"/>
-  <table-filter match-name="Boleto"/>
-  <table-filter match-name="Avion"/>
-  <table-filter match-name="Usuario"/>
-  <table-filter match-name="Aerolinea"/>
-  <table-filter match-name="Ruta"/>
+  <table-filter match-name="boleto"/>
+  <table-filter match-name="ruta"/>
+  <table-filter match-name="aerolinea"/>
+  <table-filter match-name="usuario"/>
+  <table-filter match-name="avion"/>
 </hibernate-reverse-engineering>

@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 05/05/2017 06:23:32 PM by Hibernate Tools 4.3.1 -->
+<!-- Generated 11/05/2017 10:54:47 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="cr.ac.una.prograiv.project.domain.Aerolinea" table="Aerolinea" catalog="proyectoAerolinea" optimistic-lock="version">
+    <class name="cr.ac.una.prograiv.project.domain.Aerolinea" table="aerolinea" catalog="proyectoaerolinea" optimistic-lock="version">
         <id name="pkaIdAerolinea" type="java.lang.Integer">
             <column name="PKA_idAerolinea" />
             <generator class="identity" />
@@ -23,7 +23,7 @@
         <property name="ultimoUsuario" type="string">
             <column name="ultimoUsuario" length="45" not-null="true" />
         </property>
-        <set name="avions" table="Avion" inverse="true" lazy="true" fetch="select">
+        <set name="avions" table="avion" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="FK_idAerolinea" not-null="true" />
             </key>

@@ -1,5 +1,5 @@
 package cr.ac.una.prograiv.project.domain;
-// Generated 25/04/2017 03:07:58 AM by Hibernate Tools 4.3.1
+// Generated 11/05/2017 10:54:46 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -25,13 +25,14 @@ public class Usuario  implements java.io.Serializable {
      private String numCel;
      private String ultimoUsuario;
      private Date ultimaFecha;
-     private Set boletos = new HashSet(0);
+     private boolean admin;
+     private Set<Boleto> boletos = new HashSet<Boleto>(0);
 
     public Usuario() {
     }
 
 	
-    public Usuario(String contrasena, String nombreUsuario, String nombre, String apellido1, String numTel, String ultimoUsuario, Date ultimaFecha) {
+    public Usuario(String contrasena, String nombreUsuario, String nombre, String apellido1, String numTel, String ultimoUsuario, Date ultimaFecha, boolean admin) {
         this.contrasena = contrasena;
         this.nombreUsuario = nombreUsuario;
         this.nombre = nombre;
@@ -39,8 +40,9 @@ public class Usuario  implements java.io.Serializable {
         this.numTel = numTel;
         this.ultimoUsuario = ultimoUsuario;
         this.ultimaFecha = ultimaFecha;
+        this.admin = admin;
     }
-    public Usuario(String contrasena, String nombreUsuario, String direccion, String nombre, String apellido1, String apellido2, Date fechaNacimiento, String email, String numTel, String numCel, String ultimoUsuario, Date ultimaFecha, Set boletos) {
+    public Usuario(String contrasena, String nombreUsuario, String direccion, String nombre, String apellido1, String apellido2, Date fechaNacimiento, String email, String numTel, String numCel, String ultimoUsuario, Date ultimaFecha, boolean admin, Set<Boleto> boletos) {
        this.contrasena = contrasena;
        this.nombreUsuario = nombreUsuario;
        this.direccion = direccion;
@@ -53,6 +55,7 @@ public class Usuario  implements java.io.Serializable {
        this.numCel = numCel;
        this.ultimoUsuario = ultimoUsuario;
        this.ultimaFecha = ultimaFecha;
+       this.admin = admin;
        this.boletos = boletos;
     }
    
@@ -147,11 +150,18 @@ public class Usuario  implements java.io.Serializable {
     public void setUltimaFecha(Date ultimaFecha) {
         this.ultimaFecha = ultimaFecha;
     }
-    public Set getBoletos() {
+    public boolean isAdmin() {
+        return this.admin;
+    }
+    
+    public void setAdmin(boolean admin) {
+        this.admin = admin;
+    }
+    public Set<Boleto> getBoletos() {
         return this.boletos;
     }
     
-    public void setBoletos(Set boletos) {
+    public void setBoletos(Set<Boleto> boletos) {
         this.boletos = boletos;
     }
 

@@ -1,5 +1,5 @@
 package cr.ac.una.prograiv.project.domain;
-// Generated 25/04/2017 03:07:58 AM by Hibernate Tools 4.3.1
+// Generated 11/05/2017 10:54:46 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -22,7 +22,7 @@ public class Ruta  implements java.io.Serializable {
      private double tarifa;
      private Date ultimaFecha;
      private String ultimoUsuario;
-     private Set boletos = new HashSet(0);
+     private Set<Boleto> boletos = new HashSet<Boleto>(0);
 
     public Ruta() {
     }
@@ -38,7 +38,7 @@ public class Ruta  implements java.io.Serializable {
         this.ultimaFecha = ultimaFecha;
         this.ultimoUsuario = ultimoUsuario;
     }
-    public Ruta(Avion avion, String origen, String destino, int minutos, Date fechaSalida, Double descuento, double tarifa, Date ultimaFecha, String ultimoUsuario, Set boletos) {
+    public Ruta(Avion avion, String origen, String destino, int minutos, Date fechaSalida, Double descuento, double tarifa, Date ultimaFecha, String ultimoUsuario, Set<Boleto> boletos) {
        this.avion = avion;
        this.origen = origen;
        this.destino = destino;
@@ -121,11 +121,11 @@ public class Ruta  implements java.io.Serializable {
     public void setUltimoUsuario(String ultimoUsuario) {
         this.ultimoUsuario = ultimoUsuario;
     }
-    public Set getBoletos() {
+    public Set<Boleto> getBoletos() {
         return this.boletos;
     }
     
-    public void setBoletos(Set boletos) {
+    public void setBoletos(Set<Boleto> boletos) {
         this.boletos = boletos;
     }
 

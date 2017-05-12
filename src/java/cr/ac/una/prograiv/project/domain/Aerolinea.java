@@ -1,5 +1,5 @@
 package cr.ac.una.prograiv.project.domain;
-// Generated 25/04/2017 03:07:58 AM by Hibernate Tools 4.3.1
+// Generated 11/05/2017 10:54:46 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -18,7 +18,7 @@ public class Aerolinea  implements java.io.Serializable {
      private String telefono;
      private Date ultimaFecha;
      private String ultimoUsuario;
-     private Set avions = new HashSet(0);
+     private Set<Avion> avions = new HashSet<Avion>(0);
 
     public Aerolinea() {
     }
@@ -29,7 +29,7 @@ public class Aerolinea  implements java.io.Serializable {
         this.ultimaFecha = ultimaFecha;
         this.ultimoUsuario = ultimoUsuario;
     }
-    public Aerolinea(String nombre, String email, String telefono, Date ultimaFecha, String ultimoUsuario, Set avions) {
+    public Aerolinea(String nombre, String email, String telefono, Date ultimaFecha, String ultimoUsuario, Set<Avion> avions) {
        this.nombre = nombre;
        this.email = email;
        this.telefono = telefono;
@@ -80,11 +80,11 @@ public class Aerolinea  implements java.io.Serializable {
     public void setUltimoUsuario(String ultimoUsuario) {
         this.ultimoUsuario = ultimoUsuario;
     }
-    public Set getAvions() {
+    public Set<Avion> getAvions() {
         return this.avions;
     }
     
-    public void setAvions(Set avions) {
+    public void setAvions(Set<Avion> avions) {
         this.avions = avions;
     }
 
