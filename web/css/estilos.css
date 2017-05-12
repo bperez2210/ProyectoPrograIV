@@ -156,15 +156,17 @@ and open the template in the editor.
 .titulos1{
     width: 100%;
     text-align: center;
-    background: purple;
-    font-family: 'Tangerine', serif;
+    background: #00394d;
+    font-family: 'Satisfy', cursive;
     font-size: 40px;
+    color: yellow;
 }
 .titulos2{
     text-align: center;
-    background: rosybrown;
-    font-family: 'Tangerine', serif;
+    background: #00394d;
+    font-family: 'Satisfy', cursive;
     font-size: 40px;
+    color: yellow;
 }
 .espacio1{
     height:160px;
