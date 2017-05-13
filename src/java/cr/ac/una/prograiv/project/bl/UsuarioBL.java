@@ -18,7 +18,12 @@ public class UsuarioBL extends BaseBL implements IBaseBL<Usuario, Integer>{
     }
     @Override
     public void save(Usuario o) {
+        if(findByNombreUsuario(o.getNombreUsuario())==null){
             this.getDao(o.getClass().getName()).save(o);
+        }
+        else{
+            System.out.println("Ya existe");
+        }
     }
     
     
@@ -46,14 +51,12 @@ public class UsuarioBL extends BaseBL implements IBaseBL<Usuario, Integer>{
     }
     
     public Usuario findByNombreUsuario(String name){
-        System.out.println("Hola1");
         List<Usuario> usuarios = findAll(Usuario.class.getName());
         for (Usuario aux: usuarios) {
             if(aux.getNombreUsuario().equals(name)){
                 return aux;
             }
         }
-        System.out.println("no lo encontre");
         return null;
     }
     

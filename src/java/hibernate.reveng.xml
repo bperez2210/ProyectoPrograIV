@@ -40,7 +40,7 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-reverse-engineering>
-  <schema-selection match-catalog="proyectoAerolinea"/>
+  <schema-selection match-catalog="proyectoaerolinea"/>
   <table-filter match-name="boleto"/>
   <table-filter match-name="ruta"/>
   <table-filter match-name="aerolinea"/>
