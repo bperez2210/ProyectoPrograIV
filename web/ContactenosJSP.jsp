@@ -75,7 +75,7 @@
                         <button type="submit" class="btn btn-default">Buscar</button>
                     </form>
                     <ul class="nav navbar-nav navbar-right" id="menuLogSign">
-                        <li><button type="button" class="btn btn-info glyphicon glyphicon-user" data-toggle="modal" data-target="#myModalRegistro">Registrarse</button></li>
+                        <li><button type="button" class="btn btn-info glyphicon glyphicon-user" data-toggle="modal" data-target="#myModalRegistro"> Registrarse</button></li>
                         <li><button type="button" class="btn btn-success glyphicon glyphicon-log-in" data-toggle="modal" data-target="#myModalIngreso"> Entrar</button></li>
                     </ul>
                 </div>

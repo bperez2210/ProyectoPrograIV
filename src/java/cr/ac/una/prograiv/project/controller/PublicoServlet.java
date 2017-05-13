@@ -58,7 +58,8 @@ public class PublicoServlet extends HttpServlet {
                         }
                     }
                     break;
-                    
+                case "registroUsuario":
+                    break;
                 default:
                     out.print("E~No se indico la acción que se desea realizare");
                     break;                 
