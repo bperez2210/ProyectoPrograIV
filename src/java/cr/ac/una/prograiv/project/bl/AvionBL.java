@@ -17,7 +17,7 @@ public class AvionBL extends BaseBL implements IBaseBL<Avion, Integer>{
     }
     @Override
     public void save(Avion o) {
-        if(this.findById(o.getPkaIdAvion())==null){
+        if(this.findByWord(o.getMarca())==null){
             this.getDao(o.getClass().getName()).save(o);
         }else{
             System.out.println("Error el Avion no existe");
@@ -47,7 +47,13 @@ public class AvionBL extends BaseBL implements IBaseBL<Avion, Integer>{
 
     @Override
     public Avion findByWord(String o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        List<Avion> aviones = findAll(Avion.class.getName());
+        for (Avion aux: aviones) {
+            if(aux.getModelo().equals(o)){
+                return aux;
+            }
+        }
+        return null;
     }
     
 }

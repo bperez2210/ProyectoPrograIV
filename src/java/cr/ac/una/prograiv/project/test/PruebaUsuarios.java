@@ -18,11 +18,11 @@ import java.util.List;
 public class PruebaUsuarios {
         public static void main(String []args){
 //            testFindByWord("cristian031");
-            testSave();
+//            testSave();
 //        testMerge();
 //        testDelete();
 //        testFindbyID(2);
- //       testFindAll();
+        testFindAll();
     }
     
     public static void testSave(){

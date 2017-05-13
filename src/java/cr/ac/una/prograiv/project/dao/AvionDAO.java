@@ -76,7 +76,7 @@ public class AvionDAO extends HibernateUtil implements IBaseDAO<Avion,Integer>{ 
         List<Avion> listaAvion;
         try{
         iniciarOperacion();
-        listaAvion = getSesion().createQuery("select * from Avion").list();
+        listaAvion = getSesion().createQuery("from Avion").list();
         }finally{
             getSesion().close();
         }
