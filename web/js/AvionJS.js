@@ -83,6 +83,7 @@ function dibujarFilaAvi(rowData) {
     row.append($("<td>" + rowData.cantFilas+ "</td>"));
     row.append($("<td>" + rowData.ultimaFecha + "</td>"));
     row.append($("<td>" + rowData.ultimoUsuario + "</td>"));
+    
     row.append($('<td><button type="button" class="btn btn-default btn-xs" aria-label="Left Align" onclick="alert(\'modificar\');">'+
                         '<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'+
                     '</button>'+
