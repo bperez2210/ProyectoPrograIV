@@ -119,27 +119,34 @@ and open the template in the editor.
       height: 300px;
   }
   
+  
+  /**************************************************/
+  
   .mapa{
-    position: relative; top: 5px; left: 20px;
+    margin-left: 5%;
 }
 
 .contacto{
-    width:33%;
-    height:420px;
-    position: relative; top:-390px; left: 710px;
+    width:400px;
+    height:0;
+    position: relative; top:-350px; left: 50%;
     
 }
 .oficinas{
-    position: relative; top:-8px; left:270px; 
+    position: relative; top:0; left:20%; 
     color: blue;
+    width: 100px;
 }
 .piedepagina{
-    position: relative; top:0px; left: 1%;
+    position: relative; top:0px; left: 0%;
 }
 
 .enviar{
-    position: relative; top:-20px; left: 130px;
+    position: relative; top:0; left: 45%;
 }
+
+/**************************************************/
+
 .texto{
     width: 100%;
     text-align: justify;
@@ -179,4 +186,34 @@ and open the template in the editor.
 }
 .espacio4{
     height:415px;
+}
+/**************************************************/
+#contenedorLugares{
+    font-family: 'Lobster', cursive;
+    margin-left: 5%;
+    color:seagreen;
+}
+
+#contenedorLugares li{
+    float: left;
+    margin-left: 10px;
+    position: relative;
+    width: 18%;
+    color:#00394d;
+}
+
+#contenedorLugares a{
+    color:#00394d;
+    text-decoration:none;
+}
+
+#contenedorLugares img{
+    width: 200px;
+    height: 150px;
+}
+
+@media screen and (min-width: 768px) {
+.custom-collapse .collapse{
+            display:block;
+      }
 }

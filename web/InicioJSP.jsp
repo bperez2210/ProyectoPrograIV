@@ -16,6 +16,7 @@
         <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
         <link href="css/datetimepicker.min.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
         <script src="js/datetimepicker.js" type="text/javascript"></script>
         <script src="js/utils.js" type="text/javascript"></script>
         <script src="js/PublicoJS.js" type="text/javascript"></script>
@@ -35,9 +36,6 @@
                     </div>
                     <div class="modal-body" id="myModalMessage">
                         <p>This is a small modal.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
@@ -144,11 +142,11 @@
                     <!-- Modal content-->
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <button type="button" class="close" data-dismiss="modal" onclick="limpiarForm()">&times;</button>
                             <h4 class="modal-title">Inscripción Usuario</h4>
                         </div>
                         <div class="modal-body" id="modalForm">
-                            <form class="form-horizontal" role="form">
+                            <form class="form-horizontal" role="form" id="formRegistro">
                                 <div class="form-group" id="groupusuario">
                                     <label for="usuario" class="col-lg-2 control-label">Usuario</label>
                                     <div class="col-lg-2">
@@ -191,8 +189,8 @@
                                 </div>
                                 <div class="form-group" id="groupnacionalidad">
                                     <label for="pais" class="col-lg-2 control-label">Nacionalidad</label>
-                                    <div class="col-xs-4" id="nacionalidad_sign">
-                                        <select class="form-control">
+                                    <div class="col-xs-4" >
+                                        <select class="form-control" id="nacionalidad_sign">
                                             <option value="AFG">Afghanistan</option>
                                             <option value="ALA">Åland Islands</option>
                                             <option value="ALB">Albania</option>
@@ -456,13 +454,13 @@
                                 </div>
                                 <div class="form-group" id="groupdireccion">
                                     <label for="direccion" class="col-xs-2 control-label">Dirección</label>
-                                    <div class="col-xs-3" id="direccion_sign">
-                                        <input type="text" id="ciudad" class="form-control" placeholder="Ciudad">
+                                    <div class="col-xs-3" >
+                                        <input type="text" id="direccion_sign" class="form-control" placeholder="Ciudad">
                                     </div>
                                 </div>
                                 <div class="modal-footer buttonOpt" >
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-primary" onclick="registro()">Registrarse</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="limpiarForm()">Cerrar</button>
+                                    <button type="button" class="btn btn-primary"  onclick="registro()">Registrarse</button>
                                 </div>
                                 <div class="form-group" >
                                     <div class="alert alert-success" id="mesageRegistro">
@@ -489,11 +487,11 @@
                     <!-- Modal content-->
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <button type="button" class="close" data-dismiss="modal" onclick="limpiarForm()">&times;</button>
                             <h4 class="modal-title">Ingreso Usuario</h4>
                         </div>
                         <div class="modal-body" id="modalForm">
-                            <form class="form-horizontal" role="form">
+                            <form class="form-horizontal" role="form" id="formLogin">
                                 <div class="form-group">
                                     <div>
                                         <img src="imagenes/inicio/user-login-man-person-512.png" alt="" class="userIngreso"/>
@@ -511,7 +509,7 @@
                                         <div class="glyphicon glyphicon-lock glyphiconIngreso" ></div>
                                     </div>
                                 </div><div class="modal-footer buttonOpt" >
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="limpiarForm()">Cerrar</button>
                                     <button type="button" class="btn btn-primary" onclick="logueo()" data-dismiss="modal">Ingresar</button>
                                 </div>
                                 <div class="form-group" >
@@ -525,7 +523,48 @@
                     </div>
                 </div>
             </div>
-        </div>     
+        </div>
+
+
+        <!-- ********************************************************** -->
+        <!-- INFO COUNTRIES -->
+        <!-- ********************************************************** -->
+        <div class="custom-collapse">
+            <div id="contenedorLugares" >
+                <h2><u>Lugares más populares</u></h2>
+                <ul class="list-group collapse" id="side-menu-collapse">
+                    <li class="list-group-item dropdown-toggle">
+                        <a href="#">
+                            <h3>Costa Rica</h3>
+                            <img src="imagenes/Lugares/CR.jpg" alt=""/>
+                        </a>          
+                    </li>
+                    <li class="list-group-item dropdown-toggle">
+                        <a href="#"><h3>Dubai</h3>
+                            <img src="imagenes/Lugares/DUB.jpg" alt=""/>
+                        </a>
+                    </li>
+                    <li class="list-group-item dropdown-toggle">
+                        <a href="#">
+                            <h3>París</h3>
+                            <img src="imagenes/Lugares/FR.jpg" alt=""/>
+                        </a>
+                    </li>
+                    <li class="list-group-item dropdown-toggle">
+                        <a href="#">
+                            <h3>Roma</h3>
+                            <img src="imagenes/Lugares/ITA.jpg" alt=""/>
+                        </a>
+                    </li>
+                    <li class="list-group-item dropdown-toggle">
+                        <a href="#">
+                            <h3>New York</h3>
+                            <img src="imagenes/Lugares/NY.jpg" alt=""/>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </body>
 </html>
 

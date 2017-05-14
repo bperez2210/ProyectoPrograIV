@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 11/05/2017 10:54:47 PM by Hibernate Tools 4.3.1 -->
+<!-- Generated 12/05/2017 07:23:57 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="cr.ac.una.prograiv.project.domain.Usuario" table="usuario" catalog="proyectoaerolinea" optimistic-lock="version">
-        <id name="pkIdUsuario" type="java.lang.Integer">
+        <id name="pkIdUsuario" type="int">
             <column name="PK_idUsuario" />
-            <generator class="identity" />
+            <generator class="assigned" />
         </id>
         <property name="contrasena" type="string">
             <column name="contrasena" length="15" not-null="true" />
@@ -46,6 +46,9 @@
         </property>
         <property name="admin" type="boolean">
             <column name="admin" not-null="true" />
+        </property>
+        <property name="nacionalidad" type="string">
+            <column name="nacionalidad" length="45" />
         </property>
         <set name="boletos" table="boleto" inverse="true" lazy="true" fetch="select">
             <key>

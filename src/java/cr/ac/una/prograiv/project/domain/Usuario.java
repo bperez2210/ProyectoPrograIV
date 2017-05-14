@@ -1,5 +1,5 @@
 package cr.ac.una.prograiv.project.domain;
-// Generated 11/05/2017 10:54:46 PM by Hibernate Tools 4.3.1
+// Generated 12/05/2017 07:23:55 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -12,7 +12,7 @@ import java.util.Set;
 public class Usuario  implements java.io.Serializable {
 
 
-     private Integer pkIdUsuario;
+     private int pkIdUsuario;
      private String contrasena;
      private String nombreUsuario;
      private String direccion;
@@ -26,6 +26,7 @@ public class Usuario  implements java.io.Serializable {
      private String ultimoUsuario;
      private Date ultimaFecha;
      private boolean admin;
+     private String nacionalidad;
      private Set<Boleto> boletos = new HashSet<Boleto>(0);
 
     public Usuario() {
@@ -42,7 +43,9 @@ public class Usuario  implements java.io.Serializable {
         this.ultimaFecha = ultimaFecha;
         this.admin = admin;
     }
-    public Usuario(String contrasena, String nombreUsuario, String direccion, String nombre, String apellido1, String apellido2, Date fechaNacimiento, String email, String numTel, String numCel, String ultimoUsuario, Date ultimaFecha, boolean admin, Set<Boleto> boletos) {
+    
+    public Usuario(int pkIdUsuario, String contrasena, String nombreUsuario, String direccion, String nombre, String apellido1, String apellido2, Date fechaNacimiento, String email, String numTel, String numCel, String ultimoUsuario, Date ultimaFecha, boolean admin, String nacionalidad, Set<Boleto> boletos) {
+       this.pkIdUsuario = pkIdUsuario;
        this.contrasena = contrasena;
        this.nombreUsuario = nombreUsuario;
        this.direccion = direccion;
@@ -56,14 +59,15 @@ public class Usuario  implements java.io.Serializable {
        this.ultimoUsuario = ultimoUsuario;
        this.ultimaFecha = ultimaFecha;
        this.admin = admin;
+       this.nacionalidad = nacionalidad;
        this.boletos = boletos;
     }
    
-    public Integer getPkIdUsuario() {
+    public int getPkIdUsuario() {
         return this.pkIdUsuario;
     }
     
-    public void setPkIdUsuario(Integer pkIdUsuario) {
+    public void setPkIdUsuario(int pkIdUsuario) {
         this.pkIdUsuario = pkIdUsuario;
     }
     public String getContrasena() {
@@ -156,6 +160,13 @@ public class Usuario  implements java.io.Serializable {
     
     public void setAdmin(boolean admin) {
         this.admin = admin;
+    }
+    public String getNacionalidad() {
+        return this.nacionalidad;
+    }
+    
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
     }
     public Set<Boleto> getBoletos() {
         return this.boletos;

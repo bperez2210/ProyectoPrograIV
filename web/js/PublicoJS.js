@@ -55,7 +55,6 @@ function logueo(){
 
 function registro(){
     if(validar()){
-    mostrarModal("myModal", "Espere por favor..", "Registrando información de Usuario");
     $.ajax({
        url: 'PublicoServlet',
        data: {
@@ -75,22 +74,20 @@ function registro(){
        },
        success: function (data) { //si todo esta correcto en la respuesta del ajax, la respuesta queda en el data
             // se cambia el mensaje del modal por la respuesta del ajax
-           ocultarModal("myModal");
             var respuestaTxt = data.substring(2);
             var tipoRespuesta = data.substring(0, 2);
             if (tipoRespuesta === "E~") {
-                mostrarMensaje("mesageRegistro","alert alert-danger", respuestaTxt , "Error!");
-                $('#myModalRegistro').modal('show');
+                mostrarModal("myModal", "Se genero un error", respuestaTxt);
             }else{
-                window.location.pathname = respuestaTxt;
-            }
+                mostrarModal("myModal","Registro de Usuarios",$("#nombre_sign").val() +" agregado con exito");
+                $('#myModalRegistro').modal("hide");
+                limpiarForm();
+           }
         },
-        type: 'GET',
-        dataType: "text"
+        type: 'POST'
     });
     }else{
         mostrarMensaje("mesageRegistro","alert alert-danger", "Debe digitar los campos del formulario", "Error!");
-         $('#myModalRegistro').modal('show');
     }
 }
 
@@ -164,4 +161,14 @@ function mostrarMensaje(name,classCss, msg, neg) {
     $(".mesajeResultNeg").html(neg);
     $(".mesajeResultText").html(msg);
     $(".mesajeResultText").html(msg);
+}
+
+
+function limpiarForm() {
+    //esconde el div del mensaje
+    mostrarMensaje("mesageRegistro","hiddenDiv", "", "");
+    mostrarMensaje("mesajelogin","hiddenDiv", "", "");
+    //Resetear el formulario
+    $('#formRegistro').trigger("reset");
+    $('#formLogin').trigger("reset");
 }
