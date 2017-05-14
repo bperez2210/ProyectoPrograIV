@@ -5,6 +5,7 @@
  */
 package cr.ac.una.prograiv.project.bl;
 import cr.ac.una.prograiv.project.domain.Aerolinea;
+import cr.ac.una.prograiv.project.domain.Usuario;
 import java.util.List;
 
 /**
@@ -17,10 +18,10 @@ public class AerolineaBL extends BaseBL implements IBaseBL<Aerolinea, Integer>{
     }
     @Override
     public void save(Aerolinea o) {
-        if(this.findById(o.getPkaIdAerolinea())==null){
+        if(this.findByWord(o.getNombre())==null){
             this.getDao(o.getClass().getName()).save(o);
         }else{
-            System.out.println("Error el Aerolinea no existe");
+            System.out.println("Error el Aerolinea ya existe");
         }
     }
     
@@ -47,7 +48,13 @@ public class AerolineaBL extends BaseBL implements IBaseBL<Aerolinea, Integer>{
 
     @Override
     public Aerolinea findByWord(String o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         List<Aerolinea> aerolineas = findAll(Aerolinea.class.getName());
+        for (Aerolinea aux: aerolineas) {
+            if(aux.getNombre().equals(o)){
+                return aux;
+            }
+        }
+        return null;
     }
     
 }
