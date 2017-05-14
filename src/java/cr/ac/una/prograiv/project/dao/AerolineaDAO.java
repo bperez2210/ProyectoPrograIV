@@ -76,7 +76,7 @@ public class AerolineaDAO extends HibernateUtil implements IBaseDAO<Aerolinea,In
         List<Aerolinea> listaAerolinea;
         try{
         iniciarOperacion();
-        listaAerolinea = getSesion().createQuery("select * from Aerolinea").list();
+        listaAerolinea = getSesion().createQuery("from Aerolinea").list();
         }finally{
             getSesion().close();
         }

@@ -76,7 +76,7 @@ public class RutaDAO extends HibernateUtil implements IBaseDAO<Ruta,Integer>{ //
         List<Ruta> listaRuta;
         try{
         iniciarOperacion();
-        listaRuta = getSesion().createQuery("select * from Ruta").list();
+        listaRuta = getSesion().createQuery("from Ruta").list();
         }finally{
             getSesion().close();
         }

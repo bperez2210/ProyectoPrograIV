@@ -76,7 +76,7 @@ public class BoletoDAO extends HibernateUtil implements IBaseDAO< Boleto,Integer
         List<Boleto> listaBoleto;
         try{
         iniciarOperacion();
-        listaBoleto = getSesion().createQuery("select * from Boleto").list();
+        listaBoleto = getSesion().createQuery("from Boleto").list();
         }finally{
             getSesion().close();
         }

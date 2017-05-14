@@ -15,8 +15,27 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+        <script src="../../js/AerolineaJS.js" type="text/javascript"></script>
+        <script src="../../js/utils.js" type="text/javascript"></script>
     </head>
     <body>
+        <!-- ********************************************************** -->
+        <!-- MODAL PARA MOSTRAR MENSAJES  -->
+        <!-- ********************************************************** -->
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" id="myModalTitle">Modal Header</h4>
+                    </div>
+                    <div class="modal-body" id="myModalMessage">
+                        <p>This is a small modal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- ********************************************************** -->
         <!-- ENCABEZADO -->
         <!-- ********************************************************** -->
@@ -42,47 +61,67 @@
                 </div>
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#">Opciones de Administrador</a>
+                        <a class="navbar-brand" href="#">Administrador</a>
                     </div>
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                Consulta de datos <b class="caret"></b>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+                                Aerolineas <b class="caret"></b>
                             </a>
                             <ul class="navbar-nav navbar-inverse dropdown-menu">
-                                <li><a href="#">Usuarios</a></li>
-                                <li><a href="#">Vuelos</a></li>
+                                <li><a href="UsuariosJSP.jsp">Usuarios</a></li>
+                                <li><a href="AvionesJSP.jsp">Aviones</a></li>
+                                <li><a href="BoletosJSP.jsp">Boletos</a></li>
+                                <li><a href="RutasJSP.jsp">Rutas</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                Administración <b class="caret"></b>
-                            </a>
-                            <ul class="navbar-nav navbar-inverse dropdown-menu">
-                                <li><a href="#">Promociones</a></li>
-                                <li><a href="#">Aerolineas</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                Gestión de Datos <b class="caret"></b>
-                            </a>
-                            <ul class="navbar-nav navbar-inverse dropdown-menu">
-                                <li><a href="#">Rutas</a></li>
-                                <li><a href="#">Aviones</a></li>
-                                <li><a href="#">Tipo de aviones</a></li>
-                                <li><a href="#">Horarios</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    </ul>             
                     <div class="nav navbar-nav navbar-right" id="menuLogSign">
-                        <button type="button" class="btn btn-danger glyphicon glyphicon-log-in" data-toggle="modal" data-target="#"> Cerrar sesión</button>
+                        <button type="button" class="btn btn-danger glyphicon glyphicon-log-in"> Cerrar sesión</button>
                     </div>
                 </div>
             </nav> <!--Navbar-->
         </div>
+
         <!-- ********************************************************** -->
-        <!-- ENCABEZADO -->
+        <!-- Tablas -->
         <!-- ********************************************************** -->
+        
+        <div align="center" id="panelAerolineas">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                <div class="col-sm-12">
+                        <form role="form" onsubmit="return false;" id="formAerolineas" class="form-horizontal centered">
+                            <div class="form-group" id="groupNombreAero">
+                                <div class="col-sm-4" style="text-align: right; vertical-align: middle;">
+                                    <p><b>Buscar por nombre de la Aerolinea:</b></p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" id="buscarAero" placeholder="Digite el nombre de la aerolinea">
+                                </div>
+                                <div class="col-sm-4">
+                                    <button type="button" onclick="busquedaPersonas()" class="btn btn-info centered">
+                                        Buscar <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-hover table-condensed" id="tablaAerolineas">
+
+                    </table>
+                </div>
+                <div class="panel-footer">
+                    <ul class="pagination justify-content-center" id="paginacionOpcAero"></ul>
+                    <br>
+                    Nota: Acciones validas dependeran del rol del usuario
+                </div>
+            </div>
+        </div> 
+        
+        
+        
     </body>
 </html>

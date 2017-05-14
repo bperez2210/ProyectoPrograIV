@@ -115,7 +115,7 @@ function validar() {
         $("grouppassword").addClass("has-error");
         validacion = false;
     }
-    if ($("#password_confirm_sign").val() === "") {
+    if ($("#password_confirm_sign").val() === "" ) {
         $("#grouppasswordConfirm").addClass("has-error");
         validacion = false;
     }
@@ -167,7 +167,7 @@ function mostrarMensaje(name,classCss, msg, neg) {
 function limpiarForm() {
     //esconde el div del mensaje
     mostrarMensaje("mesageRegistro","hiddenDiv", "", "");
-    mostrarMensaje("mesajelogin","hiddenDiv", "", "");
+    mostrarMensaje("mesajeLogin","hiddenDiv", "", "");
     //Resetear el formulario
     $('#formRegistro').trigger("reset");
     $('#formLogin').trigger("reset");

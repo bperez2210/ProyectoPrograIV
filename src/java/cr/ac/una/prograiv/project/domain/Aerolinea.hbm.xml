@@ -23,11 +23,5 @@
         <property name="ultimoUsuario" type="string">
             <column name="ultimoUsuario" length="45" not-null="true" />
         </property>
-        <set name="avions" table="avion" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="FK_idAerolinea" not-null="true" />
-            </key>
-            <one-to-many class="cr.ac.una.prograiv.project.domain.Avion" />
-        </set>
     </class>
 </hibernate-mapping>

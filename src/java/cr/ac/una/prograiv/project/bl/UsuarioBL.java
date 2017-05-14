@@ -60,8 +60,6 @@ public class UsuarioBL extends BaseBL implements IBaseBL<Usuario, Integer>{
         return null;
     }
     
-
-    
     @Override
     public Usuario findByWord(String o) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

@@ -69,7 +69,7 @@
                         <li><a href="#">Vuelos</a></li>
                         <li><a href="QuienesSomosJSP.jsp">Quiénes Somos</a></li>
                         <li><a href="#">Referencias</a></li>
-                        <li><a href="ContactenosJSP.jsp">Contacto</a></li>
+                        <li  class="active"><a href="ContactenosJSP.jsp">Contacto</a></li>
                     </ul>
                     <form class="navbar-form navbar-left">
                         <div class="form-group">

@@ -27,7 +27,6 @@ public class Usuario  implements java.io.Serializable {
      private Date ultimaFecha;
      private boolean admin;
      private String nacionalidad;
-     private Set<Boleto> boletos = new HashSet<Boleto>(0);
 
     public Usuario() {
     }
@@ -44,7 +43,7 @@ public class Usuario  implements java.io.Serializable {
         this.admin = admin;
     }
     
-    public Usuario(int pkIdUsuario, String contrasena, String nombreUsuario, String direccion, String nombre, String apellido1, String apellido2, Date fechaNacimiento, String email, String numTel, String numCel, String ultimoUsuario, Date ultimaFecha, boolean admin, String nacionalidad, Set<Boleto> boletos) {
+    public Usuario(int pkIdUsuario, String contrasena, String nombreUsuario, String direccion, String nombre, String apellido1, String apellido2, Date fechaNacimiento, String email, String numTel, String numCel, String ultimoUsuario, Date ultimaFecha, boolean admin, String nacionalidad) {
        this.pkIdUsuario = pkIdUsuario;
        this.contrasena = contrasena;
        this.nombreUsuario = nombreUsuario;
@@ -60,7 +59,6 @@ public class Usuario  implements java.io.Serializable {
        this.ultimaFecha = ultimaFecha;
        this.admin = admin;
        this.nacionalidad = nacionalidad;
-       this.boletos = boletos;
     }
    
     public int getPkIdUsuario() {
@@ -168,17 +166,6 @@ public class Usuario  implements java.io.Serializable {
     public void setNacionalidad(String nacionalidad) {
         this.nacionalidad = nacionalidad;
     }
-    public Set<Boleto> getBoletos() {
-        return this.boletos;
-    }
-    
-    public void setBoletos(Set<Boleto> boletos) {
-        this.boletos = boletos;
-    }
-
-
-
-
 }
 
 

@@ -50,11 +50,5 @@
         <property name="nacionalidad" type="string">
             <column name="nacionalidad" length="45" />
         </property>
-        <set name="boletos" table="boleto" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="FK_idUsuario" not-null="true" />
-            </key>
-            <one-to-many class="cr.ac.una.prograiv.project.domain.Boleto" />
-        </set>
     </class>
 </hibernate-mapping>

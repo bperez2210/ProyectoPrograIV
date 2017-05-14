@@ -18,11 +18,11 @@ import java.util.List;
 public class PruebaUsuarios {
         public static void main(String []args){
 //            testFindByWord("cristian031");
-            testSave();
+//            testSave();
 //        testMerge();
 //        testDelete();
 //        testFindbyID(2);
- //       testFindAll();
+        testFindAll();
     }
     
     public static void testSave(){
@@ -64,6 +64,7 @@ public class PruebaUsuarios {
         List<Usuario> listaUsuario;
         listaUsuario = ubl.findAll(Usuario.class.getName());
         System.out.println(listaUsuario.size());
+        
 
 //        UsuarioDAO pDao = new UsuarioDAO();
 //        listaUsuario = pDao.findAll();

@@ -18,8 +18,6 @@ public class Aerolinea  implements java.io.Serializable {
      private String telefono;
      private Date ultimaFecha;
      private String ultimoUsuario;
-     private Set<Avion> avions = new HashSet<Avion>(0);
-
     public Aerolinea() {
     }
 
@@ -29,13 +27,12 @@ public class Aerolinea  implements java.io.Serializable {
         this.ultimaFecha = ultimaFecha;
         this.ultimoUsuario = ultimoUsuario;
     }
-    public Aerolinea(String nombre, String email, String telefono, Date ultimaFecha, String ultimoUsuario, Set<Avion> avions) {
+    public Aerolinea(String nombre, String email, String telefono, Date ultimaFecha, String ultimoUsuario) {
        this.nombre = nombre;
        this.email = email;
        this.telefono = telefono;
        this.ultimaFecha = ultimaFecha;
        this.ultimoUsuario = ultimoUsuario;
-       this.avions = avions;
     }
    
     public Integer getPkaIdAerolinea() {
@@ -80,16 +77,6 @@ public class Aerolinea  implements java.io.Serializable {
     public void setUltimoUsuario(String ultimoUsuario) {
         this.ultimoUsuario = ultimoUsuario;
     }
-    public Set<Avion> getAvions() {
-        return this.avions;
-    }
-    
-    public void setAvions(Set<Avion> avions) {
-        this.avions = avions;
-    }
-
-
-
 
 }
 

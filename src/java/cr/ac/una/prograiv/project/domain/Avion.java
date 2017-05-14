@@ -13,7 +13,7 @@ public class Avion  implements java.io.Serializable {
 
 
      private Integer pkaIdAvion;
-     private Aerolinea aerolinea;
+     private Integer aerolinea;
      private Integer anno;
      private String modelo;
      private String marca;
@@ -22,19 +22,18 @@ public class Avion  implements java.io.Serializable {
      private Integer cantFilas;
      private Date ultimaFecha;
      private String ultimoUsuario;
-     private Set<Ruta> rutas = new HashSet<Ruta>(0);
 
     public Avion() {
     }
 
 	
-    public Avion(Aerolinea aerolinea, int cantPasajeros, Date ultimaFecha, String ultimoUsuario) {
+    public Avion(int aerolinea, int cantPasajeros, Date ultimaFecha, String ultimoUsuario) {
         this.aerolinea = aerolinea;
         this.cantPasajeros = cantPasajeros;
         this.ultimaFecha = ultimaFecha;
         this.ultimoUsuario = ultimoUsuario;
     }
-    public Avion(Aerolinea aerolinea, Integer anno, String modelo, String marca, int cantPasajeros, Integer cantAsientosPorFila, Integer cantFilas, Date ultimaFecha, String ultimoUsuario, Set<Ruta> rutas) {
+    public Avion(int aerolinea, Integer anno, String modelo, String marca, int cantPasajeros, Integer cantAsientosPorFila, Integer cantFilas, Date ultimaFecha, String ultimoUsuario) {
        this.aerolinea = aerolinea;
        this.anno = anno;
        this.modelo = modelo;
@@ -44,7 +43,6 @@ public class Avion  implements java.io.Serializable {
        this.cantFilas = cantFilas;
        this.ultimaFecha = ultimaFecha;
        this.ultimoUsuario = ultimoUsuario;
-       this.rutas = rutas;
     }
    
     public Integer getPkaIdAvion() {
@@ -54,11 +52,11 @@ public class Avion  implements java.io.Serializable {
     public void setPkaIdAvion(Integer pkaIdAvion) {
         this.pkaIdAvion = pkaIdAvion;
     }
-    public Aerolinea getAerolinea() {
+    public Integer getAerolinea() {
         return this.aerolinea;
     }
     
-    public void setAerolinea(Aerolinea aerolinea) {
+    public void setAerolinea(int aerolinea) {
         this.aerolinea = aerolinea;
     }
     public Integer getAnno() {
@@ -117,17 +115,6 @@ public class Avion  implements java.io.Serializable {
     public void setUltimoUsuario(String ultimoUsuario) {
         this.ultimoUsuario = ultimoUsuario;
     }
-    public Set<Ruta> getRutas() {
-        return this.rutas;
-    }
-    
-    public void setRutas(Set<Ruta> rutas) {
-        this.rutas = rutas;
-    }
-
-
-
-
 }
 
 

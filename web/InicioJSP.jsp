@@ -67,7 +67,7 @@
                 </div>
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="InicioJSP.jsp">Inicio</a></li>
+                        <li class="active"><a href="InicioJSP.jsp">Inicio</a></li>
                         <li><a href="#">Vuelos</a></li>
                         <li><a href="QuienesSomosJSP.jsp">Quiénes Somos</a></li>
                         <li><a href="#">Referencias</a></li>

@@ -14,18 +14,16 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
+import com.google.gson.Gson;
 /**
  *
  * @author admin
  */
-
-public class PublicoServlet extends HttpServlet {
+public class UsuariosServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,33 +34,24 @@ public class PublicoServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
+            String json;
             Usuario usuario = new Usuario();
             UsuarioBL uBL = new UsuarioBL();
             HttpSession session = request.getSession();
-            String accion = request.getParameter("accion");
             Thread.sleep(1000);
             
+            String accion = request.getParameter("accion");
             switch(accion){
-                case "loginUsuario":
-                    usuario = uBL.findByNombreUsuario(request.getParameter("nombreUsuario"));
-                    if(usuario==null){ out.print("E~Usuario no registrado en el sistema");}
-                    if(usuario != null){
-                        if(!usuario.getContrasena().equals(request.getParameter("contrasena"))){
-                             out.print("E~Usuario o contraseña incorrectos");
-                        }else{
-                            if(usuario.isAdmin()){
-                                out.print("A~ProyectoPrograIV/pags/admin/UsuariosJSP.jsp");
-                            }else{
-                                out.print("U~ProyectoPrograIV/pags/usuario/InicioUsuarioJSP.jsp");
-                            }
-                        }
-                    }
+                case "consultarUsuarios":
+                    json = new Gson().toJson(uBL.findAll(Usuario.class.getName()));
+                    out.print(json);
                     break;
-                case "registroUsuario":
+                case "registroAdmin":
                     usuario.setContrasena(request.getParameter("contrasena"));
                     usuario.setNombreUsuario(request.getParameter("nombreUsuario"));
                     usuario.setDireccion(request.getParameter("direccion"));
@@ -77,7 +66,7 @@ public class PublicoServlet extends HttpServlet {
                     usuario.setFechaNacimiento(date);
                     usuario.setEmail(request.getParameter("correo"));
                     usuario.setNacionalidad(request.getParameter("nacionalidad"));
-                    usuario.setAdmin(false);
+                    usuario.setAdmin(true);
                     usuario.setNumTel("0000000");
                     usuario.setUltimaFecha(new Date());
                     usuario.setUltimoUsuario("admin");
@@ -92,6 +81,8 @@ public class PublicoServlet extends HttpServlet {
         } catch (Exception e) {
             out.print("E~" + e.getMessage());
         }
+        
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
