@@ -17,6 +17,7 @@
         <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
         <script src="../../js/RutasJS.js" type="text/javascript"></script>
         <script src="../../js/utils.js" type="text/javascript"></script>
+        
     </head>
     <body>
         <!-- ********************************************************** -->
@@ -103,6 +104,9 @@
                                     <button type="button" onclick="busquedaPersonas()" class="btn btn-info centered">
                                         Buscar <span class="glyphicon glyphicon-search"></span>
                                     </button>
+                                    <button type="button" class="btn btn-info centered" data-toggle="modal" data-target="#myModalFormulario">
+                                        Agregar <span class="glyphicon glyphicon-plus"  ></span>
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -120,5 +124,86 @@
                 </div>
             </div>
         </div> 
+        
+        <!-- ********************************************************** -->
+        <!-- formulario -->
+        <!-- ********************************************************** -->
+        
+        <div class="modal fade" id="myModalFormulario" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" id="myModalTitle">Insertar Rutas
+                    </div>
+                    <div class="modal-body" id="myModalMessage">
+                        <form role="form" onsubmit="return false;" id="formaddRutas">
+                            <div class="form-group" id="groupidRuta">
+                                <label for="iadRuta">ID_Ruta:</label>
+                                <input type="text" class="form-control" id="idRuta" autofocus="true" placeholder="ID_Ruta">
+                            </div>
+
+                            <div class="form-group" id="groupidAvion">
+                                <label for="idAvion">ID_Avion:</label>
+                                <input type="text" class="form-control" id="idAvion" placeholder="ID_Avion" >
+                            </div>
+
+                            <div class="form-group" id="groupOrigen">
+                                <label for="origen">Origen:</label>
+                                <input type="text" class="form-control" id="apellido1" placeholder="Origen">
+                            </div>
+
+                            <div class="form-group" id="groupDestino">
+                                <label for="destino">Destino:</label>
+                                <input type="text" class="form-control" id="destino" placeholder="Destino">
+                            </div>
+
+                            <div class="form-group" id="groupFechaSalida">
+                                <label for="dpFechaSalida">Fecha Salida:</label>
+                                <div id="dpFechaNacimiento" class="input-group date form_date" data-date="" data-date-format="dd/mm/yyyy" data-link-field="dtp_input2" data-link-format="dd/mm/yyyy">
+                                    <input class="form-control" type="text" value="" readonly placeholder="dd/mm/aaaa" id="dpFechaSalidaText">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="groupDescuento">
+                                <label for="descuento">Descuento:</label>
+                                <input type="text" class="form-control" id="descuento" placeholder="Descuento">
+                            </div>
+                            
+                            <div class="form-group" id="groupTarifa">
+                                <label for="tarifa">Tarifa:</label>
+                                <input type="text" class="form-control" id="tarifa" placeholder="Tarifa">
+                            </div>
+                            <div class="form-group" id="groupMinutos">
+                                <label for="minutos">Minutos:</label>
+                                <input type="text" class="form-control" id="minutos" placeholder="Minutos">
+                            </div>
+                            
+                            <div class="form-group" id="groupDestino">
+                                <label for="destino">Destino:</label>
+                                <input type="text" class="form-control" id="destino" placeholder="Destino">
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="hidden" value="agregarPersona" id="personasAction"/>                       
+                                    <button type="submit" class="btn btn-primary" id="enviar">Guardar</button>
+                                <button type="reset" class="btn btn-danger" id="cancelar">Cancelar</button>
+                            </div>
+
+                            <div class="form-group height25" >
+                                <div class="alert alert-success hiddenDiv" id="mesajeResult">
+                                    <strong id="mesajeResultNeg">Info!</strong> 
+                                    <span id="mesajeResultText">This alert box could indicate a neutral informative change or action.</span>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
