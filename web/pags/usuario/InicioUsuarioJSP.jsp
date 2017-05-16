@@ -20,7 +20,7 @@
         <!-- ENCABEZADO -->
         <!-- ********************************************************** -->
         <div id="encabezado">
-            <h3>Aero-Admin</h3>
+            <h3>Aero-Tickets</h3>
             <img src="../../imagenes/inicio/avion.gif" alt=""/>
         </div>
 
@@ -49,7 +49,7 @@
                         <li><a href="#">Descuentos disponibles</a></li>
                     </ul>             
                     <div class="nav navbar-nav navbar-right" id="menuLogSign">
-                        <button type="button" class="btn btn-danger glyphicon glyphicon-log-in"> Cerrar sesión</button>
+                        <button type="button" class="btn btn-danger glyphicon glyphicon-log-in cerrar"><a href="../../InicioJSP.jsp"> Cerrar sesión</a></button>
                     </div>
                 </div>
             </nav> <!--Navbar-->

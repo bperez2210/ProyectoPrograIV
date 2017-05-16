@@ -220,6 +220,7 @@ and open the template in the editor.
 
 /**************************************************/
 .panel{
+    position: relative;
     width: 90%;
     text-align: left;
     border: 2px solid black;
@@ -227,3 +228,15 @@ and open the template in the editor.
 .panel td{
     border: 2px solid whitesmoke;
 }
+
+.cerrar a{
+    text-decoration:none;
+    color: white;
+}
+
+
+/* Footer 
+-------------------------------------------------- */
+
+
+
