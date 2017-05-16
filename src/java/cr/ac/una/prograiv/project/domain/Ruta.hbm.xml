@@ -8,9 +8,9 @@
             <column name="PKA_idRuta" />
             <generator class="identity" />
         </id>
-        <many-to-one name="avion" class="cr.ac.una.prograiv.project.domain.Avion" fetch="select">
+        <property  name="avion" type="java.lang.Integer">
             <column name="FK_idAvion" not-null="true" />
-        </many-to-one>
+        </property>
         <property name="origen" type="string">
             <column name="origen" length="100" not-null="true" />
         </property>
@@ -35,11 +35,5 @@
         <property name="ultimoUsuario" type="string">
             <column name="ultimoUsuario" length="45" not-null="true" />
         </property>
-        <set name="boletos" table="boleto" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="FK_idRuta" not-null="true" />
-            </key>
-            <one-to-many class="cr.ac.una.prograiv.project.domain.Boleto" />
-        </set>
     </class>
 </hibernate-mapping>

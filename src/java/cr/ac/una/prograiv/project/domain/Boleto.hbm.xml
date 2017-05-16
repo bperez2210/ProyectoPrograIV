@@ -8,12 +8,12 @@
             <column name="PKA_idUsuario" />
             <generator class="identity" />
         </id>
-        <many-to-one name="ruta" class="cr.ac.una.prograiv.project.domain.Ruta" fetch="select">
+        <property name="ruta" type="java.lang.Integer">
             <column name="FK_idRuta" not-null="true" />
-        </many-to-one>
-        <many-to-one name="usuario" class="cr.ac.una.prograiv.project.domain.Usuario" fetch="select">
+        </property>
+        <property name="usuario" type="java.lang.Integer">
             <column name="FK_idUsuario" not-null="true" />
-        </many-to-one>
+        </property>
         <property name="numAsiento" type="int">
             <column name="numAsiento" not-null="true" />
         </property>

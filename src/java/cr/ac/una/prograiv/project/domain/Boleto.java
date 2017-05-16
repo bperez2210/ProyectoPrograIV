@@ -11,8 +11,8 @@ public class Boleto  implements java.io.Serializable {
 
 
      private Integer pkaIdUsuario;
-     private Ruta ruta;
-     private Usuario usuario;
+     private Integer ruta;
+     private Integer usuario;
      private int numAsiento;
      private int numFila;
      private Date ultimafecha;
@@ -21,7 +21,7 @@ public class Boleto  implements java.io.Serializable {
     public Boleto() {
     }
 
-    public Boleto(Ruta ruta, Usuario usuario, int numAsiento, int numFila, Date ultimafecha, String ultimoUsuario) {
+    public Boleto(Integer ruta, Integer usuario, int numAsiento, int numFila, Date ultimafecha, String ultimoUsuario) {
        this.ruta = ruta;
        this.usuario = usuario;
        this.numAsiento = numAsiento;
@@ -37,18 +37,18 @@ public class Boleto  implements java.io.Serializable {
     public void setPkaIdUsuario(Integer pkaIdUsuario) {
         this.pkaIdUsuario = pkaIdUsuario;
     }
-    public Ruta getRuta() {
+    public Integer getRuta() {
         return this.ruta;
     }
     
-    public void setRuta(Ruta ruta) {
+    public void setRuta(Integer ruta) {
         this.ruta = ruta;
     }
-    public Usuario getUsuario() {
+    public Integer getUsuario() {
         return this.usuario;
     }
     
-    public void setUsuario(Usuario usuario) {
+    public void setUsuario(Integer usuario) {
         this.usuario = usuario;
     }
     public int getNumAsiento() {

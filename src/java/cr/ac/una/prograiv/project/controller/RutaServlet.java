@@ -5,12 +5,16 @@
  */
 package cr.ac.una.prograiv.project.controller;
 
+import com.google.gson.Gson;
+import cr.ac.una.prograiv.project.bl.RutaBL;
+import cr.ac.una.prograiv.project.domain.Ruta;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -30,17 +34,51 @@ public class RutaServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet RutaServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet RutaServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        PrintWriter out = response.getWriter();
+        try {
+            String json;
+            Ruta ruta = new Ruta();
+            RutaBL uBL = new RutaBL();
+            HttpSession session = request.getSession();
+            
+            Thread.sleep(1000);
+            
+            String accion = request.getParameter("accion");
+            switch(accion){
+                case "consultarRutas":
+                    System.out.println(uBL.findAll(Ruta.class.getName()).size());
+                    json = new Gson().toJson(uBL.findAll(Ruta.class.getName()));
+                    out.print(json);
+                    break;
+                case "registroRutas":
+//                    usuario.setContrasena(request.getParameter("contrasena"));
+//                    usuario.setNombreUsuario(request.getParameter("nombreUsuario"));
+//                    usuario.setDireccion(request.getParameter("direccion"));
+//                    usuario.setNombre(request.getParameter("nombre"));
+//                    usuario.setApellido1(request.getParameter("apellido1"));
+//                    usuario.setApellido2(request.getParameter("apellido2"));
+//                    
+//                    String fechatxt = request.getParameter("fechaNacimiento");
+//                    DateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
+//                    Date date = format.parse(fechatxt);
+//                    
+//                    usuario.setFechaNacimiento(date);
+//                    usuario.setEmail(request.getParameter("correo"));
+//                    usuario.setNacionalidad(request.getParameter("nacionalidad"));
+//                    usuario.setAdmin(true);
+//                    usuario.setNumTel("0000000");
+//                    usuario.setUltimaFecha(new Date());
+//                    usuario.setUltimoUsuario("admin");
+//                    uBL.save(usuario);
+                    break;
+                default:
+                    out.print("E~No se indico la acción que se desea realizare");
+                    break;                 
+            }
+        } catch (NumberFormatException e) {
+            out.print("E~" + e.getMessage());
+        } catch (Exception e) {
+            out.print("E~" + e.getMessage());
         }
     }
 

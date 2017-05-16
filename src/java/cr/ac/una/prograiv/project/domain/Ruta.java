@@ -13,7 +13,7 @@ public class Ruta  implements java.io.Serializable {
 
 
      private Integer pkaIdRuta;
-     private Avion avion;
+     private Integer avion;
      private String origen;
      private String destino;
      private int minutos;
@@ -22,13 +22,12 @@ public class Ruta  implements java.io.Serializable {
      private double tarifa;
      private Date ultimaFecha;
      private String ultimoUsuario;
-     private Set<Boleto> boletos = new HashSet<Boleto>(0);
 
     public Ruta() {
     }
 
 	
-    public Ruta(Avion avion, String origen, String destino, int minutos, Date fechaSalida, double tarifa, Date ultimaFecha, String ultimoUsuario) {
+    public Ruta(Integer avion, String origen, String destino, int minutos, Date fechaSalida, double tarifa, Date ultimaFecha, String ultimoUsuario) {
         this.avion = avion;
         this.origen = origen;
         this.destino = destino;
@@ -38,7 +37,7 @@ public class Ruta  implements java.io.Serializable {
         this.ultimaFecha = ultimaFecha;
         this.ultimoUsuario = ultimoUsuario;
     }
-    public Ruta(Avion avion, String origen, String destino, int minutos, Date fechaSalida, Double descuento, double tarifa, Date ultimaFecha, String ultimoUsuario, Set<Boleto> boletos) {
+    public Ruta(Integer avion, String origen, String destino, int minutos, Date fechaSalida, Double descuento, double tarifa, Date ultimaFecha, String ultimoUsuario) {
        this.avion = avion;
        this.origen = origen;
        this.destino = destino;
@@ -48,7 +47,6 @@ public class Ruta  implements java.io.Serializable {
        this.tarifa = tarifa;
        this.ultimaFecha = ultimaFecha;
        this.ultimoUsuario = ultimoUsuario;
-       this.boletos = boletos;
     }
    
     public Integer getPkaIdRuta() {
@@ -58,11 +56,11 @@ public class Ruta  implements java.io.Serializable {
     public void setPkaIdRuta(Integer pkaIdRuta) {
         this.pkaIdRuta = pkaIdRuta;
     }
-    public Avion getAvion() {
+    public Integer getAvion() {
         return this.avion;
     }
     
-    public void setAvion(Avion avion) {
+    public void setAvion(Integer avion) {
         this.avion = avion;
     }
     public String getOrigen() {
@@ -121,17 +119,6 @@ public class Ruta  implements java.io.Serializable {
     public void setUltimoUsuario(String ultimoUsuario) {
         this.ultimoUsuario = ultimoUsuario;
     }
-    public Set<Boleto> getBoletos() {
-        return this.boletos;
-    }
-    
-    public void setBoletos(Set<Boleto> boletos) {
-        this.boletos = boletos;
-    }
-
-
-
-
 }
 
 
