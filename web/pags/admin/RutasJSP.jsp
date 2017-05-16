@@ -182,11 +182,6 @@
                                 <input type="text" class="form-control" id="minutos" placeholder="Minutos">
                             </div>
                             
-                            <div class="form-group" id="groupDestino">
-                                <label for="destino">Destino:</label>
-                                <input type="text" class="form-control" id="destino" placeholder="Destino">
-                            </div>
-                            
                             <div class="form-group">
                                 <input type="hidden" value="agregarPersona" id="personasAction"/>                       
                                     <button type="submit" class="btn btn-primary" id="enviar">Guardar</button>
