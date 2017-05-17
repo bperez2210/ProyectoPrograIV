@@ -104,6 +104,9 @@
                                     <button type="button" onclick="busquedaPersonas()" class="btn btn-info centered"  id="btMostarForm">
                                         Buscar <span class="glyphicon glyphicon-search"></span>
                                     </button>
+                                    <button type="button" class="btn btn-info centered" data-toggle="modal" data-target="#myModalFormulario">
+                                        Agregar Admi <span class="glyphicon glyphicon-plus"  ></span>
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -121,5 +124,78 @@
                 </div>
             </div>
         </div> 
+        
+         <!-- ********************************************************** -->
+        <!-- formulario -->
+        <!-- ********************************************************** -->
+        
+        <div class="modal fade" id="myModalFormulario" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" id="myModalTitle">Insertar Rutas
+                    </div>
+                    <div class="modal-body" id="myModalMessage">
+                        <form role="form" onsubmit="return false;" id="formaddRutas">
+                            <div class="form-group" id="groupidRuta">
+                                <label for="iadRuta">Nombre_Usuario:</label>
+                                <input type="text" class="form-control" id="idRuta" autofocus="true" placeholder="Nombre_Usuario">
+                            </div>
+
+                            <div class="form-group" id="groupidAvion">
+                                <label for="idAvion">Nombre:</label>
+                                <input type="text" class="form-control" id="idAvion" placeholder="Nombre" >
+                            </div>
+
+                            <div class="form-group" id="groupOrigen">
+                                <label for="origen">Apellido1:</label>
+                                <input type="text" class="form-control" id="apellido1" placeholder="Apellido1">
+                            </div>
+
+                            <div class="form-group" id="groupDestino">
+                                <label for="destino">Apellido2:</label>
+                                <input type="text" class="form-control" id="destino" placeholder="Apellido2">
+                            </div>
+
+
+                            <div class="form-group" id="groupDescuento">
+                                <label for="descuento">Nacionalidad:</label>
+                                <input type="text" class="form-control" id="descuento" placeholder="Nacionalidad">
+                            </div>
+                            
+                            <div class="form-group" id="groupFechaSalida">
+                                <label for="dpFechaSalida">Fecha Nac:</label>
+                                <div id="dpFechaNacimiento" class="input-group date form_date" data-date="" data-date-format="dd/mm/yyyy" data-link-field="dtp_input2" data-link-format="dd/mm/yyyy">
+                                    <input class="form-control" type="text" value="" readonly placeholder="dd/mm/aaaa" id="dpFechaSalidaText">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group" id="groupMinutos">
+                                <label for="minutos">Email:</label>
+                                <input type="text" class="form-control" id="minutos" placeholder="Email">
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="hidden" value="agregarPersona" id="personasAction"/>                       
+                                    <button type="submit" class="btn btn-primary" id="enviar">Guardar</button>
+                                <button type="reset" class="btn btn-danger" id="cancelar">Cancelar</button>
+                            </div>
+
+                            <div class="form-group height25" >
+                                <div class="alert alert-success hiddenDiv" id="mesajeResult">
+                                    <strong id="mesajeResultNeg">Info!</strong> 
+                                    <span id="mesajeResultText">This alert box could indicate a neutral informative change or action.</span>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

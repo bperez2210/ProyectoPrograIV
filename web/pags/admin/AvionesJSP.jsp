@@ -104,6 +104,9 @@
                                     <button type="button" onclick="busquedaPersonas()" class="btn btn-info centered">
                                         Buscar <span class="glyphicon glyphicon-search"></span>
                                     </button>
+                                    <button type="button" class="btn btn-info centered" data-toggle="modal" data-target="#myModalFormulario">
+                                        Agregar <span class="glyphicon glyphicon-plus"  ></span>
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -120,7 +123,77 @@
                     Nota: Acciones validas dependeran del rol del usuario
                 </div>
             </div>
-        </div> 
+        </div>
         
         
+         <!-- ********************************************************** -->
+        <!-- formulario -->
+        <!-- ********************************************************** -->
+        
+        <div class="modal fade" id="myModalFormulario" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" id="myModalTitle">Insertar Rutas
+                    </div>
+                    <div class="modal-body" id="myModalMessage">
+                        <form role="form" onsubmit="return false;" id="formaddRutas">
+                            <div class="form-group" id="groupidRuta">
+                                <label for="iadRuta">ID_Avion:</label>
+                                <input type="text" class="form-control" id="idRuta" autofocus="true" placeholder="ID_Avion">
+                            </div>
+
+                            <div class="form-group" id="groupidAvion">
+                                <label for="idAvion">ID_Aerolinea:</label>
+                                <input type="text" class="form-control" id="idAvion" placeholder="ID_Aerolinea" >
+                            </div>
+
+                            <div class="form-group" id="groupOrigen">
+                                <label for="origen">Marca:</label>
+                                <input type="text" class="form-control" id="apellido1" placeholder="Marca">
+                            </div>
+
+                            <div class="form-group" id="groupDestino">
+                                <label for="destino">Modelo:</label>
+                                <input type="text" class="form-control" id="destino" placeholder="Modelo">
+                            </div>
+
+
+                            <div class="form-group" id="groupDescuento">
+                                <label for="descuento">Año:</label>
+                                <input type="text" class="form-control" id="descuento" placeholder="Año">
+                            </div>
+                            
+                            <div class="form-group" id="groupTarifa">
+                                <label for="tarifa">Cantidad Pasajeros:</label>
+                                <input type="text" class="form-control" id="tarifa" placeholder="Cantidad Pasajeros">
+                            </div>
+                            <div class="form-group" id="groupMinutos">
+                                <label for="minutos">Asientos por fila:</label>
+                                <input type="text" class="form-control" id="minutos" placeholder="Cantidad de asientos por filas">
+                            </div>
+                            <div class="form-group" id="groupMinutos">
+                                <label for="minutos">Cantidad de filas:</label>
+                                <input type="text" class="form-control" id="minutos" placeholder="Cantidad de filas">
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="hidden" value="agregarPersona" id="personasAction"/>                       
+                                    <button type="submit" class="btn btn-primary" id="enviar">Guardar</button>
+                                <button type="reset" class="btn btn-danger" id="cancelar">Cancelar</button>
+                            </div>
+
+                            <div class="form-group height25" >
+                                <div class="alert alert-success hiddenDiv" id="mesajeResult">
+                                    <strong id="mesajeResultNeg">Info!</strong> 
+                                    <span id="mesajeResultText">This alert box could indicate a neutral informative change or action.</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>    
 </html>
