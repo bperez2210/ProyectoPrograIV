@@ -89,8 +89,8 @@
         <!-- ********************************************************** -->
         
         <div align="center" id="panelRutas">
-            <div class="panel panel-success">
-                <div class="panel-heading">
+            <div class="panel">
+                <div class="panel-heading panel-id">
                 <div class="col-sm-12">
                         <form role="form" onsubmit="return false;" id="formRutas" class="form-horizontal centered">
                             <div class="form-group" id="groupNombreAero">
@@ -179,7 +179,7 @@
                             </div>
                             <div class="form-group" id="groupMinutos">
                                 <label for="minutos">Minutos:</label>
-                                <input type="text" class="form-control" id="minutos" placeholder="Minutos">
+                                <input type="text" class="form-control" id="minutos" placeholder="Minutos" onclick="">
                             </div>
                             
                             <div class="form-group">
@@ -194,7 +194,6 @@
                                     <span id="mesajeResultText">This alert box could indicate a neutral informative change or action.</span>
                                 </div>
                             </div>
-
                         </form>
                     </div>
                 </div>

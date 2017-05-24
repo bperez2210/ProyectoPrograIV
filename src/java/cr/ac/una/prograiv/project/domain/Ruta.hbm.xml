@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 12/05/2017 07:23:57 PM by Hibernate Tools 4.3.1 -->
+<!-- Generated 19/05/2017 11:46:30 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="cr.ac.una.prograiv.project.domain.Ruta" table="ruta" catalog="proyectoaerolinea" optimistic-lock="version">
+    <class name="cr.ac.una.prograiv.project.domain.Ruta" table="ruta" catalog="proyectoaerolinea">
         <id name="pkaIdRuta" type="java.lang.Integer">
             <column name="PKA_idRuta" />
-            <generator class="identity" />
+            <generator class="identity"></generator>
         </id>
-        <property  name="avion" type="java.lang.Integer">
+        <property name="avion" type="java.lang.Integer">
             <column name="FK_idAvion" not-null="true" />
         </property>
         <property name="origen" type="string">

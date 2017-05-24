@@ -18,16 +18,16 @@ import java.util.List;
 public class PruebaUsuarios {
         public static void main(String []args){
 //            testFindByWord("cristian031");
-//            testSave();
+          testSave();
 //        testMerge();
 //        testDelete();
 //        testFindbyID(2);
-        testFindAll();
+//        testFindAll();
     }
     
     public static void testSave(){
-//        Usuario u2 = new Usuario("0000","bperez2210","Bryan","Perez","sdfdsfs","Lobo",new Date(),true);
-        Usuario u2 = new Usuario("admin1","admin1","bryan","perez", "156454546", "Admin", new Date(),true);
+//        Usuario u2 = new Usuario(12151541,"0000","bperez2210","Bryan","Perez","sdfdsfs","Lobo",new Date(),true);
+        Usuario u2 = new Usuario(115860285,"admin","admin","bryan","perez", "156454546", "Admin", new Date(),true);
 //        UsuarioDAO pDao = new UsuarioDAO();
         UsuarioBL pDao = new UsuarioBL();
 //        uBL.save(u2);
@@ -35,14 +35,14 @@ public class PruebaUsuarios {
     }
     
     public static void testMerge(){
-         Usuario u1 = new Usuario("1234","cristian031","Cristian","Garita", "Nose", "admin",new Date(),false);
+         Usuario u1 = new Usuario(000000,"1234","cristian031","Cristian","Garita", "Nose", "admin",new Date(),false);
         UsuarioDAO pDao = new UsuarioDAO();
         u1.setNumTel("546841313");
         pDao.merge(u1);
     }
     
     public static void testDelete(){
-        Usuario u1 = new Usuario("1234","cristian031","Cristian","Garita", "Nose", "admin",new Date(),false);
+        Usuario u1 = new Usuario(0202313,"1234","cristian031","Cristian","Garita", "Nose", "admin",new Date(),false);
         UsuarioDAO pDao = new UsuarioDAO();
         pDao.save(u1);
     }

@@ -51,7 +51,19 @@ public class UsuariosServlet extends HttpServlet {
                     json = new Gson().toJson(uBL.findAll(Usuario.class.getName()));
                     out.print(json);
                     break;
+                case "eliminarUsuario":
+                    
+                        usuario.setPkIdUsuario(Integer.parseInt(request.getParameter("idUsuario")));
+                    
+                        //Se elimina el objeto
+                        uBL.delete(usuario);
+
+                        //Se imprime la respuesta con el response
+                        out.print("El usuario fue eliminado correctamente");
+                 
+                    break;
                 case "registroAdmin":
+                    usuario.setPkIdUsuario(131231313);
                     usuario.setContrasena(request.getParameter("contrasena"));
                     usuario.setNombreUsuario(request.getParameter("nombreUsuario"));
                     usuario.setDireccion(request.getParameter("direccion"));

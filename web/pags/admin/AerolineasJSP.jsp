@@ -88,8 +88,8 @@
         <!-- ********************************************************** -->
         
         <div align="center" id="panelAerolineas">
-            <div class="panel panel-success">
-                <div class="panel-heading">
+            <div class="panel">
+                <div class="panel-heading panel-id">
                 <div class="col-sm-12">
                         <form role="form" onsubmit="return false;" id="formAerolineas" class="form-horizontal centered">
                             <div class="form-group" id="groupNombreAero">

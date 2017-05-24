@@ -79,19 +79,19 @@
                     <div class="nav navbar-nav navbar-right" id="menuLogSign">
                         <button type="button" class="btn btn-danger glyphicon glyphicon-log-in cerrar"><a href="../../InicioJSP.jsp"> Cerrar sesión</a></button>
                     </div>
-                    
+
                 </div>
             </nav> <!--Navbar-->
         </div>
 
-        
+
         <!-- ********************************************************** -->
         <!-- Tabla Usuario -->
-       
+
         <div align="center" id="panelUsuarios">
-            <div class="panel panel-success">
-                <div class="panel-heading">
-                <div class="col-sm-12">
+            <div class="panel">
+                <div class="panel-heading panel-id">
+                    <div class="col-sm-12">
                         <form role="form" onsubmit="return false;" id="formPersonas" class="form-horizontal centered">
                             <div class="form-group" id="groupCedula">
                                 <div class="col-sm-4" style="text-align: right; vertical-align: middle;">
@@ -124,11 +124,11 @@
                 </div>
             </div>
         </div> 
-        
-         <!-- ********************************************************** -->
+
+        <!-- ********************************************************** -->
         <!-- formulario -->
         <!-- ********************************************************** -->
-        
+
         <div class="modal fade" id="myModalFormulario" role="dialog">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -163,7 +163,7 @@
                                 <label for="descuento">Nacionalidad:</label>
                                 <input type="text" class="form-control" id="descuento" placeholder="Nacionalidad">
                             </div>
-                            
+
                             <div class="form-group" id="groupFechaSalida">
                                 <label for="dpFechaSalida">Fecha Nac:</label>
                                 <div id="dpFechaNacimiento" class="input-group date form_date" data-date="" data-date-format="dd/mm/yyyy" data-link-field="dtp_input2" data-link-format="dd/mm/yyyy">
@@ -173,15 +173,15 @@
                                     </span>
                                 </div>
                             </div>
-                            
+
                             <div class="form-group" id="groupMinutos">
                                 <label for="minutos">Email:</label>
                                 <input type="text" class="form-control" id="minutos" placeholder="Email">
                             </div>
-                            
+
                             <div class="form-group">
                                 <input type="hidden" value="agregarPersona" id="personasAction"/>                       
-                                    <button type="submit" class="btn btn-primary" id="enviar">Guardar</button>
+                                <button type="submit" class="btn btn-primary" id="enviar">Guardar</button>
                                 <button type="reset" class="btn btn-danger" id="cancelar">Cancelar</button>
                             </div>
 
@@ -197,5 +197,36 @@
                 </div>
             </div>
         </div>
-    </body>
+
+        <!-- ********************************************************** -->
+        <!-- MODAL CONFIRMACIÓN ELIMINAR UN USUARIO -->
+        <!-- ********************************************************** -->
+
+        <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4><b>Confirmación de borrado</b><h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Desea eliminar a la persona de la base de datos, si confirma la acción la información no
+                            <br>
+                            podrá ser recuperada de esta.
+                            <br><br>
+                            Desea confirmar la eliminación de 
+                            <span id="nombreEliminar">
+
+                            </span>
+                            ?
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button class="btn btn-danger btn-ok" id="eliminar" value="" data-dismiss="modal">Eliminar</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </body>
 </html>

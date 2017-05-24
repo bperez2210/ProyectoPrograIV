@@ -88,8 +88,8 @@
         <!-- ********************************************************** -->
         
         <div align="center" id="panelBoletos">
-            <div class="panel panel-success">
-                <div class="panel-heading">
+            <div class="panel">
+                <div class="panel-heading panel-id">
                 <div class="col-sm-12">
                         <form role="form" onsubmit="return false;" id="formBoletos" class="form-horizontal centered">
                             <div class="form-group" id="groupNombreBoleto">

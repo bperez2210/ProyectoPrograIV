@@ -1,5 +1,5 @@
 package cr.ac.una.prograiv.project.domain;
-// Generated 12/05/2017 07:23:55 PM by Hibernate Tools 4.3.1
+// Generated 19/05/2017 11:46:30 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -32,7 +32,8 @@ public class Usuario  implements java.io.Serializable {
     }
 
 	
-    public Usuario(String contrasena, String nombreUsuario, String nombre, String apellido1, String numTel, String ultimoUsuario, Date ultimaFecha, boolean admin) {
+    public Usuario(int pkIdUsuario, String contrasena, String nombreUsuario, String nombre, String apellido1, String numTel, String ultimoUsuario, Date ultimaFecha, boolean admin) {
+        this.pkIdUsuario = pkIdUsuario;
         this.contrasena = contrasena;
         this.nombreUsuario = nombreUsuario;
         this.nombre = nombre;
@@ -42,7 +43,6 @@ public class Usuario  implements java.io.Serializable {
         this.ultimaFecha = ultimaFecha;
         this.admin = admin;
     }
-    
     public Usuario(int pkIdUsuario, String contrasena, String nombreUsuario, String direccion, String nombre, String apellido1, String apellido2, Date fechaNacimiento, String email, String numTel, String numCel, String ultimoUsuario, Date ultimaFecha, boolean admin, String nacionalidad) {
        this.pkIdUsuario = pkIdUsuario;
        this.contrasena = contrasena;
@@ -166,6 +166,9 @@ public class Usuario  implements java.io.Serializable {
     public void setNacionalidad(String nacionalidad) {
         this.nacionalidad = nacionalidad;
     }
+
+
+
 }
 
 
