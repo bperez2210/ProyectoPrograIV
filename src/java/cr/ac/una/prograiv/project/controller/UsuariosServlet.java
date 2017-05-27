@@ -51,6 +51,10 @@ public class UsuariosServlet extends HttpServlet {
                     json = new Gson().toJson(uBL.findAll(Usuario.class.getName()));
                     out.print(json);
                     break;
+                case "buscarUsuario":
+                    json = new Gson().toJson(uBL.findById(Integer.parseInt(request.getParameter("idUsuario"))));
+                    out.print(json);
+                    break;
                 case "eliminarUsuario":
                     
                         usuario.setPkIdUsuario(Integer.parseInt(request.getParameter("idUsuario")));

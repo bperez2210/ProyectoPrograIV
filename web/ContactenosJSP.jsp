@@ -101,6 +101,13 @@
                         </div>
                         <div class="modal-body" id="modalForm">
                             <form class="form-horizontal" role="form" id="formRegistro">
+                                <div class="form-group" id="groupidUsuario">
+                                    <label for="usuario" class="col-lg-2 control-label">Identificación</label>
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control" id="usuarioid_sign"
+                                               placeholder="Identificación">
+                                    </div>
+                                </div>
                                 <div class="form-group" id="groupusuario">
                                     <label for="usuario" class="col-lg-2 control-label">Usuario</label>
                                     <div class="col-lg-2">

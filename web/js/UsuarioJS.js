@@ -23,7 +23,7 @@ function consultarUsuarios(numpag) {
         },
         success: function (data) { //si todo esta correcto en la respuesta del ajax, la respuesta queda en el data
             ocultarModal("myModal");
-            dibujarTabla(numpag,data);
+            dibujarTabla(1,data);
             // se oculta el modal esta funcion se encuentra en el utils.js
         },
         type: 'POST',
@@ -88,7 +88,7 @@ function dibujarFila(rowData) {
     }else{
         row.append($("<td>Admin</td>"));
     }
-    row.append($('<td><button type="button" class="btn btn-default btn-xs" aria-label="Left Align" onclick="alert(\'modificar\');">'+
+    row.append($('<td><button type="button" class="btn btn-default btn-xs" aria-label="Left Align" onclick="modificarUsuario(' +rowData.pkIdUsuario + ')">'+
                         '<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>'+
                     '</button>'+
                     '<button type="button" class="btn btn-default btn-xs" aria-label="Left Align" onclick="validaEliminacion('+ "'"+ rowData.nombre + "'" +','+rowData.pkIdUsuario+')" data-target="#confirm-delete" data-toggle="modal">'+
@@ -159,20 +159,20 @@ function eliminarUsuario(idUsuario) {
 //******************************************************************************
 //******************************************************************************
 
-function busquedaUsuarios() {
+function modificarUsuario(idUsuario) {
     mostrarModal("myModal", "Espere por favor..", "Buscando nombre en la base de datos");
     //Se envia la información por ajax
     $.ajax({
-        url: 'PersonasServlet',
+        url: '../../UsuarioServlet',
         data: {
-            accion: "buscarPersonas",
-            nombre: $("#buscar").val()
+            accion: "buscarUsuario",
+            nombre: idUsuario
         },
         error: function () { //si existe un error en la respuesta del ajax
             alert("Se presento un error a la hora de buscar las personas en la base de datos");
         },
         success: function (data) { //si todo esta correcto en la respuesta del ajax, la respuesta queda en el data
-            dibujarTabla(1,data);
+            cargarUsuario(data);
             // se oculta el modal esta funcion se encuentra en el utils.js
             ocultarModal("myModal");
 
@@ -180,4 +180,17 @@ function busquedaUsuarios() {
         type: 'POST',
         dataType: "json"
     });
+}
+
+//******************************************************************************
+
+
+function limpiarForm() {
+    $('#formaddRutas').trigger("reset");
+}
+
+//******************************************************************************
+
+
+function cargarUsuario(info){
 }

@@ -63,6 +63,7 @@ public class PublicoServlet extends HttpServlet {
                     }
                     break;
                 case "registroUsuario":
+                    usuario.setPkIdUsuario(Integer.parseInt(request.getParameter("idUsuario")));
                     usuario.setContrasena(request.getParameter("contrasena"));
                     usuario.setNombreUsuario(request.getParameter("nombreUsuario"));
                     usuario.setDireccion(request.getParameter("direccion"));

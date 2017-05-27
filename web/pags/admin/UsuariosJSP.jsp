@@ -138,45 +138,49 @@
                     </div>
                     <div class="modal-body" id="myModalMessage">
                         <form role="form" onsubmit="return false;" id="formaddRutas">
-                            <div class="form-group" id="groupidRuta">
-                                <label for="iadRuta">Nombre_Usuario:</label>
-                                <input type="text" class="form-control" id="idRuta" autofocus="true" placeholder="Nombre_Usuario">
+                            <div class="form-group" id="groupidUsuario">
+                                <label for="usuario">ID_Usuario:</label>
+                                <input type="text" class="form-control" id="idUsuario" autofocus="true" placeholder="ID_Usuario">
+                            </div>
+                            <div class="form-group" id="groupUsuario">
+                                <label for="usuario">Nombre_Usuario:</label>
+                                <input type="text" class="form-control" id="nombreUsuario" autofocus="true" placeholder="Nombre_Usuario">
                             </div>
 
-                            <div class="form-group" id="groupidAvion">
-                                <label for="idAvion">Nombre:</label>
-                                <input type="text" class="form-control" id="idAvion" placeholder="Nombre" >
+                            <div class="form-group" id="groupNombre">
+                                <label for="usuario">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" placeholder="Nombre" >
                             </div>
 
-                            <div class="form-group" id="groupOrigen">
-                                <label for="origen">Apellido1:</label>
+                            <div class="form-group" id="groupapellido1">
+                                <label for="usuario">Apellido1:</label>
                                 <input type="text" class="form-control" id="apellido1" placeholder="Apellido1">
                             </div>
 
-                            <div class="form-group" id="groupDestino">
-                                <label for="destino">Apellido2:</label>
-                                <input type="text" class="form-control" id="destino" placeholder="Apellido2">
+                            <div class="form-group" id="groupapellido2">
+                                <label for="usuario">Apellido2:</label>
+                                <input type="text" class="form-control" id="apellido2" placeholder="Apellido2">
                             </div>
 
 
-                            <div class="form-group" id="groupDescuento">
-                                <label for="descuento">Nacionalidad:</label>
-                                <input type="text" class="form-control" id="descuento" placeholder="Nacionalidad">
+                            <div class="form-group" id="groupnacionalidad">
+                                <label for="usuario">Nacionalidad:</label>
+                                <input type="text" class="form-control" id="nacionalidad" placeholder="Nacionalidad">
                             </div>
 
-                            <div class="form-group" id="groupFechaSalida">
-                                <label for="dpFechaSalida">Fecha Nac:</label>
+                            <div class="form-group" id="groupfechaNacimiento">
+                                <label for="usuario">Fecha Nac:</label>
                                 <div id="dpFechaNacimiento" class="input-group date form_date" data-date="" data-date-format="dd/mm/yyyy" data-link-field="dtp_input2" data-link-format="dd/mm/yyyy">
-                                    <input class="form-control" type="text" value="" readonly placeholder="dd/mm/aaaa" id="dpFechaSalidaText">
+                                    <input class="form-control" type="text" value="" readonly placeholder="dd/mm/aaaa" id="fechaNac">
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
                                 </div>
                             </div>
 
-                            <div class="form-group" id="groupMinutos">
-                                <label for="minutos">Email:</label>
-                                <input type="text" class="form-control" id="minutos" placeholder="Email">
+                            <div class="form-group" id="groupemail">
+                                <label for="usuario">Email:</label>
+                                <input type="text" class="form-control" id="email" placeholder="Email">
                             </div>
 
                             <div class="form-group">

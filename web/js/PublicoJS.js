@@ -59,6 +59,7 @@ function registro(){
        url: 'PublicoServlet',
        data: {
            accion: "registroUsuario",
+           idUsuario: $("#usuarioid_sign").val(),
            nombreUsuario: $("#usuario_sign").val(),
            correo: $("#correo_sign").val(),
            contrasena: $("#password_sign").val(),
@@ -93,6 +94,7 @@ function registro(){
 
 function validar() {
     var validacion = true;
+    $("#groupidUsuario").removeClass("has-error");
     $("#groupusuario").removeClass("has-error");
     $("#groupcorreo").removeClass("has-error");
     $("#grouppassword").removeClass("has-error");
@@ -103,8 +105,8 @@ function validar() {
     $("#groupnacionalidad").removeClass("has-error");
     $("#groupfechaNacimiento").removeClass("has-error");
     $("#groupdireccion").removeClass("has-error");
-    if ($("#usuario_sign").val() === "") {
-        $("#groupcedula").addClass("has-error");
+    if ($("#usuarioid_sign").val() === "") {
+        $("#groupidUsuario").addClass("has-error");
         validacion = false;
     }
     if ($("#usuario_sign").val() === "") {
@@ -148,6 +150,7 @@ function validar() {
 
 //******************************************************************************
 //******************************************************************************
+
 
 function mostrarMensaje(name,classCss, msg, neg) {
     //se le eliminan los estilos al mensaje
